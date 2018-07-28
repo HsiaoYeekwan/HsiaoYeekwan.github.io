@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ACM," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="题目传送门：HDU-6206题意：输入求第四个点是否在前三个点构成的圆外，是的话输出Accepted在圆内或者圆上输出Rejected因为数据范围较大，Java的BigDecimal再合适不过。圆心为（rx,ry）rx1 = (x1^2-x2^2+y1^2-y2^2)(y1-y3)-(x1^2-x3^2+y1^2-y3^2)(y1-y2)rx2 = 2(y1-y3)(x1-x2)-2(y1-y2)">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU-6206 Apple(Java练习)">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/2017-09-18-HDU-6206 Apple(Java练习)/index.html">
+<meta property="og:site_name" content="风中追风">
+<meta property="og:description" content="题目传送门：HDU-6206题意：输入求第四个点是否在前三个点构成的圆外，是的话输出Accepted在圆内或者圆上输出Rejected因为数据范围较大，Java的BigDecimal再合适不过。圆心为（rx,ry）rx1 = (x1^2-x2^2+y1^2-y2^2)(y1-y3)-(x1^2-x3^2+y1^2-y3^2)(y1-y2)rx2 = 2(y1-y3)(x1-x2)-2(y1-y2)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-18T13:30:53.802Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HDU-6206 Apple(Java练习)">
+<meta name="twitter:description" content="题目传送门：HDU-6206题意：输入求第四个点是否在前三个点构成的圆外，是的话输出Accepted在圆内或者圆上输出Rejected因为数据范围较大，Java的BigDecimal再合适不过。圆心为（rx,ry）rx1 = (x1^2-x2^2+y1^2-y2^2)(y1-y3)-(x1^2-x3^2+y1^2-y3^2)(y1-y2)rx2 = 2(y1-y3)(x1-x2)-2(y1-y2)">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/27/2017-09-18-HDU-6206 Apple(Java练习)/"/>
+
+
+
+
+
+  <title>HDU-6206 Apple(Java练习) | 风中追风</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">风中追风</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/27/2017-09-18-HDU-6206 Apple(Java练习)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HsiaoYeekwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风中追风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">HDU-6206 Apple(Java练习)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T23:17:30+08:00">
+                2018-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="题目传送门：HDU-6206"><a href="#题目传送门：HDU-6206" class="headerlink" title="题目传送门：HDU-6206"></a>题目传送门：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=6206" target="_blank" rel="noopener">HDU-6206</a></h2><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><p>输入求第四个点是否在前三个点构成的圆外，是的话输出Accepted<br><br>在圆内或者圆上输出Rejected<br><br>因为数据范围较大，Java的BigDecimal再合适不过。<br><br>圆心为（rx,ry）<br><br>rx1 = (x1^2-x2^2+y1^2-y2^2)<em>(y1-y3)-(x1^2-x3^2+y1^2-y3^2)</em>(y1-y2)<br><br>rx2 = 2<em>(y1-y3)</em>(x1-x2)-2<em>(y1-y2)</em>(x1-x3)<br><br>rx = rx1/rx2 <br><br>ry1 = (x1^2-x2^2+y1^2-y2^2)<em>(x1-x3)-(x1^2-x3^2+y1^2-y3^2)</em>(x1-x2)<br><br>ry2 = 2<em>(x1-x3)</em>(y1-y2)-2<em>(x1-x2)</em>(y1-y3)<br><br>ry = ry1 / ry2 <br><br>网上的公式：<br><br>实际上还有更简便的方法，直接能用更直接的公式算出圆心 (x0, y0) 和半径的平方 r^2</p>
+<p>x0=((y2-y1)<em>(y3</em>y3-y1<em>y1+x3</em>x3-x1<em>x1)-(y3-y1)</em>(y2<em>y2-y1</em>y1+x2<em>x2-x1</em>x1))/(2.0<em>((x3-x1)</em>(y2-y1)-(x2-x1)<em>(y3-y1)));<br><br><br>y0=((x2-x1)</em>(x3<em>x3-x1</em>x1+y3<em>y3-y1</em>y1)-(x3-x1)<em>(x2</em>x2-x1<em>x1+y2</em>y2-y1<em>y1))/(2.0</em>((y3-y1)<em>(x2-x1)-(y2-y1)</em>(x3-x1)));<br><br><br>r^2=(x1-x0)<em>(x1-x0)+(y1-y0)</em>(y1-y0);<br><br><br>Code:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.math.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		BigDecimal x1, y1, x2, y2, x3, y3, x, y;</span><br><span class="line">		Scanner cin = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> t;</span><br><span class="line">		t = cin.nextInt();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; t ; i ++) &#123;</span><br><span class="line">			x1 = cin.nextBigDecimal();</span><br><span class="line">			y1 = cin.nextBigDecimal();</span><br><span class="line">			x2 = cin.nextBigDecimal();</span><br><span class="line">			y2 = cin.nextBigDecimal();</span><br><span class="line">			x3 = cin.nextBigDecimal();</span><br><span class="line">			y3 = cin.nextBigDecimal();</span><br><span class="line">			x = cin.nextBigDecimal();</span><br><span class="line">			y = cin.nextBigDecimal();</span><br><span class="line">			BigDecimal t1,t2,t3;</span><br><span class="line">			BigDecimal tt1,tt2,tt3;</span><br><span class="line">			t1 = x1.pow(<span class="number">2</span>).subtract(x2.pow(<span class="number">2</span>));</span><br><span class="line">			t2 = x2.pow(<span class="number">2</span>).subtract(x3.pow(<span class="number">2</span>));</span><br><span class="line">			t3 = x1.pow(<span class="number">2</span>).subtract(x3.pow(<span class="number">2</span>));</span><br><span class="line">			tt1 = y1.pow(<span class="number">2</span>).subtract(y2.pow(<span class="number">2</span>));</span><br><span class="line">			tt2 = y2.pow(<span class="number">2</span>).subtract(y3.pow(<span class="number">2</span>));</span><br><span class="line">			tt3 = y1.pow(<span class="number">2</span>).subtract(y3.pow(<span class="number">2</span>));</span><br><span class="line">			BigDecimal q1,q2,q3,qq1,qq2,qq3;</span><br><span class="line">			q1 = x1.subtract(x2);</span><br><span class="line">			q2 = x2.subtract(x3);</span><br><span class="line">			q3 = x1.subtract(x3);</span><br><span class="line">			qq1 = y1.subtract(y2);</span><br><span class="line">			qq2 = y2.subtract(y3);</span><br><span class="line">			qq3 = y1.subtract(y3);</span><br><span class="line">			BigDecimal rx, ry;</span><br><span class="line">			rx = ((t1.add(tt1)).multiply(qq3)).subtract(t3.add(tt3).multiply(qq1));</span><br><span class="line">			BigDecimal ans1,ans2;</span><br><span class="line">			ans1 = qq3.multiply(q1).subtract((qq1.multiply(q3)));</span><br><span class="line">			ans1 = ans1.multiply(BigDecimal.valueOf(<span class="number">2.0</span>));</span><br><span class="line">			rx = rx.divide(ans1);</span><br><span class="line">			ry = ((t1.add(tt1)).multiply(q3)).subtract(t3.add(tt3).multiply(q1));</span><br><span class="line">			ans2 = q3.multiply(qq1).subtract((q1.multiply(qq3)));</span><br><span class="line">			ans2 = ans2.multiply(BigDecimal.valueOf(<span class="number">2.0</span>));</span><br><span class="line">			ry = ry.divide(ans2);</span><br><span class="line">			BigDecimal R = CalR(x1, y1, rx, ry);</span><br><span class="line">			BigDecimal rood = CalR(x, y, rx, ry);</span><br><span class="line">			<span class="comment">//System.out.println("Rx = " + rx);</span></span><br><span class="line">			<span class="comment">//System.out.println("Ry = " + ry);</span></span><br><span class="line">			<span class="keyword">if</span> (rood.compareTo(R) &lt;= <span class="number">0</span> ) &#123;</span><br><span class="line">				System.out.println(<span class="string">"Rejected"</span>);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				System.out.println(<span class="string">"Accepted"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> BigDecimal <span class="title">CalR</span><span class="params">(BigDecimal x1, BigDecimal y1, BigDecimal rx, BigDecimal ry)</span> </span>&#123;</span><br><span class="line">		BigDecimal c = (x1.subtract(rx)).multiply(x1.subtract(rx));</span><br><span class="line">		BigDecimal d = (y1.subtract(ry)).multiply(y1.subtract(ry));</span><br><span class="line">		<span class="keyword">return</span> c.add(d);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ACM/" rel="tag"># ACM</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/27/2017-09-14- ICPC 新疆选拔赛总结/" rel="next" title="2017 ICPC 新疆选拔赛总结">
+                <i class="fa fa-chevron-left"></i> 2017 ICPC 新疆选拔赛总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/27/2017-10-20-UVA-1374 Power Calculus(IDA)/" rel="prev" title="UVA-1374 Power Calculus(IDA)">
+                UVA-1374 Power Calculus(IDA) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="HsiaoYeekwan" />
+            
+              <p class="site-author-name" itemprop="name">HsiaoYeekwan</p>
+              <p class="site-description motion-element" itemprop="description">Just Do It!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目传送门：HDU-6206"><span class="nav-number">1.</span> <span class="nav-text">题目传送门：HDU-6206</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题意："><span class="nav-number">2.</span> <span class="nav-text">题意：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HsiaoYeekwan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
