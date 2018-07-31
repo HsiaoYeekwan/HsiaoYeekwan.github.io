@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-27T17:42:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-27T00:00:00+08:00">
                 2017-07-27
               </time>
             
@@ -376,11 +376,8 @@
 
       
         
-          
-          题目传送门 ： UVA-11149题意 ：已知矩阵n行n列的矩阵A ， 求:因为只输出矩阵元素的最后一位数字，所以对10取模。
-思路：按照二分法的思想，原式 =而A^1+A^2+······+A^(n/2)可以继续按照上式化简，总的复杂度为logn
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include &lt;cstdlib&gt;#include &lt;cstdio&gt;#include &lt;string&gt;#include &lt;algorithm&gt;#include &lt;queue&
-          ...
+          <h2 id="题目传送门-：-UVA-11149"><a href="#题目传送门-：-UVA-11149" class="headerlink" title="题目传送门 ： UVA-11149"></a>题目传送门 ： <a href="https://vjudge.net/problem/UVA-11149" target="_blank" rel="noopener">UVA-11149</a></h2><h2 id="题意-："><a href="#题意-：" class="headerlink" title="题意 ："></a>题意 ：</h2><blockquote>
+<p>已知矩阵n行n列的矩阵A ， 求:<br><br><img src="https://img-blog.csdn.net/20160308092952312?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br><br>因为只输出矩阵元素的最后一位数字，所以对10取模。<br><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-27-UVA-11149 Power of Matrix（矩阵运算-倍增法）/#more" rel="contents">
@@ -481,7 +478,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-26T08:57:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-26T00:00:00+08:00">
                 2017-07-26
               </time>
             
@@ -538,10 +535,8 @@
 
       
         
-          
-          题目传送门 ： UVA-1601题意：有至多三个鬼abc，要移动到ABC的位置，其中两个鬼不能在一步之内交换，不能移动到同一个格子。每四个格子中至少有一个#比如a在（0，0），b在（1，1），a移动到（0，1），b移动到（1，2），这样算一步。因为状态数太多，直接bfs肯定超时。一种方法是把图重新提取出来单项bfs，另一种方法是起点和终点同时bfs，效率大大增加。因为bfs是按层拓展，起点和终点同时拓展，当出现相同状态是就return。可以设置两个标记数组，当起点拓展的时候如果遇到终点拓展过程中已经标记过的位置，就是搜索的解。
-Code：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112
-          ...
+          <h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
+<p>有至多三个鬼abc，要移动到ABC的位置，其中两个鬼不能在一步之内交换，不能移动到同一个格子。每四个格子中至少有一个#<br><br>比如a在（0，0），b在（1，1），a移动到（0，1），b移动到（1，2），这样算一步。<br><br>因为状态数太多，直接bfs肯定超时。一种方法是把图重新提取出来单项bfs，另一种方法是起点和终点同时bfs，效率大大增加。<br><br>因为bfs是按层拓展，起点和终点同时拓展，当出现相同状态是就return。<br><br>可以设置两个标记数组，当起点拓展的时候如果遇到终点拓展过程中已经标记过的位置，就是搜索的解。<br><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-26-UVA-1601 The Morning after Halloween（双向BFS）/#more" rel="contents">
@@ -642,7 +637,7 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-26T22:09:01+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-26T00:00:00+08:00">
                 2017-07-26
               </time>
             
@@ -699,11 +694,8 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
 
       
         
-          
-          题目传送门 ：HDU-4081题意 ：有n个城市，秦始皇要修用n-1条路把它们连起来，要求从任一点出发，都可以到达其它的任意点。秦始皇希望这所有n-1条路长度之和最短。然后徐福突然有冒出来，说是他有魔法，可以不用人力、财力就变出其中任意一条路出来。秦始皇希望徐福能把要修的n-1条路中最长的那条变出来，但是徐福希望能把连接人口数量最多的那条变出来。对于每条路连接的人口数，是指这条路连接的两个城市的人数之和。最终，秦始皇给出了一个公式，A/B，A是指要徐福用魔法变出的那条路所需人力，B是指除了徐福变出来的那条之外的所有n-2条路径长度之和，选使得A/B值最大的那条。
-思路：很明显的次小生成树。先求最小生成树，然后枚举任意两个点之间修建魔法道路，同时去掉两个点之间的在最小生成树之间的距离最大的道路。先用bfs处理d数组，d[i][j]表示从点i到点j的在生成树上的路径中的最大边
-反思今天的组队赛打的很烂，最后这个题也没想出来，想歪了。想到了最小生成树，可是怎么想也是n^3的复杂度原来可以用BFS预处理一下已经求出来的最小生成树上的两个点之间的最长的边知识面不够广，思维需要拓展，希望在暑假集训
-          ...
+          <h2 id="题目传送门-：HDU-4081"><a href="#题目传送门-：HDU-4081" class="headerlink" title="题目传送门 ：HDU-4081"></a>题目传送门 ：<a href="http://acm.hdu.edu.cn/showproblem.php?pid=4081" target="_blank" rel="noopener">HDU-4081</a></h2><h2 id="题意-："><a href="#题意-：" class="headerlink" title="题意 ："></a>题意 ：</h2><blockquote>
+<p>有n个城市，秦始皇要修用n-1条路把它们连起来，要求从任一点出发，都可以到达其它的任意点。<br><br>秦始皇希望这所有n-1条路长度之和最短。然后徐福突然有冒出来，说是他有魔法，可以不用人力、财力就变出其中任意一条路出来。<br><br>秦始皇希望徐福能把要修的n-1条路中最长的那条变出来，但是徐福希望能把连接人口数量最多的那条变出来。<br><br>对于每条路连接的人口数，是指这条路连接的两个城市的人数之和。<br><br>最终，秦始皇给出了一个公式，A/B，A是指要徐福用魔法变出的那条路所需人力，<br><br>B是指除了徐福变出来的那条之外的所有n-2条路径长度之和，选使得A/B值最大的那条。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-26-HDU-4081 Qin Shi Huang's National Road System（Kruskal+次小生成树）/#more" rel="contents">
@@ -804,7 +796,7 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-22T19:02:44+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-22T00:00:00+08:00">
                 2017-07-22
               </time>
             
@@ -861,10 +853,8 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
 
       
         
-          
-          题目传送门 ： HDU-1796题意：输入n，m；然后输入m个数的集合。求小于n，且可以被m个数中任意一个整除的数有哪些？因为会有重复，很容易想到容斥原理。小于n的每一个数能够被几个m中的数整除。奇加偶减。求出这几个数的最小公倍数lcm,符合题意的数有(n-1)/lcm个。
-Code:12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include &lt;cstdio&gt;#include &lt;string&gt;#include &lt;algorithm&gt;#include &lt;queue&gt;#include &lt;vector&gt;#include &lt;time.h&gt;#include &lt;set&gt;#define inf 10000000using names
-          ...
+          <h1 id="题目传送门-：-HDU-1796"><a href="#题目传送门-：-HDU-1796" class="headerlink" title="题目传送门 ： HDU-1796"></a>题目传送门 ： <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1796" target="_blank" rel="noopener">HDU-1796</a></h1><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
+<p>输入n，m；然后输入m个数的集合。<br><br>求小于n，且可以被m个数中任意一个整除的数有哪些？<br><br>因为会有重复，很容易想到容斥原理。小于n的每一个数能够被几个m中的数整除。奇加偶减。<br><br>求出这几个数的最小公倍数lcm,符合题意的数有(n-1)/lcm个。<br><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-22-HDU-1796 How many integers can you find(容斥原理+二进制枚举)/#more" rel="contents">
@@ -965,7 +955,7 @@ Code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T17:12:21+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T00:00:00+08:00">
                 2017-07-20
               </time>
             
@@ -1022,9 +1012,8 @@ Code:123456789101112131415161718192021222324252627282930313233343536373839404142
 
       
         
-          
-          题目传送门 ： POJ 3463题意：输入n，m，代表n个节点的图，下面m行每行三个数，代表从a到b的长度为c，在输入s，t，求从s到t的最短路和次短路的数目。题目要求最短路的长度为最短路的长度+1，才为合格的次短路。其中，用Dijkstra进行计算的时候同时保存最短路和次短路的长度，最后算出次短路的长度最后在检测次短路长度是否合法。cnt数组记录最短路和次短路的数量Attention:在用Dijkstra进行最短路计数的时候，一定要标记已经访问过的节点，避免重复导致计算结果增多。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105#include &lt;iostream&gt;#include &lt;cstring&gt;#
-          ...
+          <h1 id="题目传送门-：-POJ-3463"><a href="#题目传送门-：-POJ-3463" class="headerlink" title="题目传送门 ： POJ 3463"></a>题目传送门 ： <a href="http://poj.org/problem?id=3463" target="_blank" rel="noopener">POJ 3463</a></h1><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
+<p>输入n，m，代表n个节点的图，下面m行每行三个数，代表从a到b的长度为c，在输入s，t，求从s到t的最短路和次短路的数目。<br><br>题目要求最短路的长度为最短路的长度+1，才为合格的次短路。<br><br>其中，用Dijkstra进行计算的时候同时保存最短路和次短路的长度，最后算出次短路的长度<br><br>最后在检测次短路长度是否合法。<br><br>cnt数组记录最短路和次短路的数量<br><br>Attention:在用Dijkstra进行最短路计数的时候，一定要标记已经访问过的节点，避免重复导致计算结果增多。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/#more" rel="contents">
@@ -1141,7 +1130,7 @@ Code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

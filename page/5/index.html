@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T15:58:50+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T00:00:00+08:00">
                 2017-07-20
               </time>
             
@@ -376,10 +376,11 @@
 
       
         
-          
-          Dijkstra算法简介：迪杰斯特拉算法可以有效解决单源最短路径问题（不存在负边权），离散数学上称为迪杰斯特拉标号法，即每次选取永久标号的结点向外拓展，直到所有的结点都在永久标号的集合中。可以使用优先队列进行优化。
-最短路径条数：cnt数组表示从结点S到每个结点的最短路径数目d数组表示从结点S到每个节点的最短距离 如果有重边，比如从节点1到节点2距离为1的边有两条，则会认为有两条不同的最短路径 调用是先用dij跑一遍在Cal： 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748 typedef pair&lt;int, int&gt; P;//first为最短距离，second为节点编号 struct node &#123;	int to;//to表示下一个节点	int val;//val表示权值	node(int tt, int vv): to(tt), val(vv) &#123;&#125;&#125;;vector&lt;node&gt; G[maxn];
-          ...
+          <h1 id="Dijkstra算法简介："><a href="#Dijkstra算法简介：" class="headerlink" title="Dijkstra算法简介："></a>Dijkstra算法简介：</h1><blockquote>
+<p>迪杰斯特拉算法可以有效解决单源最短路径问题（不存在负边权），离散数学上称为迪杰斯特拉标号法，<br>即每次选取永久标号的结点向外拓展，直到所有的结点都在永久标号的集合中。可以使用优先队列进行优化。</p>
+</blockquote>
+<h2 id="最短路径条数："><a href="#最短路径条数：" class="headerlink" title="最短路径条数："></a>最短路径条数：</h2><blockquote>
+<p>cnt数组表示从结点S到每个结点的最短路径数目<br><br>d数组表示从结点S到每个节点的最短距离<br><br> 如果有重边，比如从节点1到节点2距离为1的边有两条，则会认为有两条不同的最短路径<br><br> 调用是先用dij跑一遍在Cal：<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-20-Dijkstra算法计算最短路径数目/#more" rel="contents">
@@ -480,7 +481,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T17:40:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T00:00:00+08:00">
                 2017-07-20
               </time>
             
@@ -537,11 +538,15 @@
 
       
         
-          
-          题目传送门 : bzoj 1491题意：对于每个节点v定义I(v):其中：C(s,t)(v)代表经过点v的起点为s终点为t的最短路的数目C(s,t)表示起点为s，终点为t的所有最短路的数目
-思路：floyd跑一边最短路，如果GG[i][j] == GG[i][k]+GG[k][j] 即为从i到j的最短路经过点k，可以用迪杰斯特拉将最短路径的数目计算出来，经过点k的最短路数量等于num[i][k]*num[k][j];Attention： 题目数据会爆int
-Code：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120#include &lt
-          ...
+          <h1 id="题目传送门-bzoj-1491"><a href="#题目传送门-bzoj-1491" class="headerlink" title="题目传送门 : bzoj 1491"></a>题目传送门 : <a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1491" target="_blank" rel="noopener">bzoj 1491</a></h1><blockquote>
+<p>题意：<br>对于每个节点v定义I(v):<br><br><img src="https://odzkskevi.qnssl.com/fa168a3bbb51aebab04cb3969827e47e?v=1531724949" alt=""><br>其中:</p>
+<ul>
+<li>C(s,t)(v)代表经过点v的起点为s终点为t的最短路的数目<br></li>
+<li>C(s,t)表示起点为s，终点为t的所有最短路的数目<br></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>思路：<br>floyd跑一边最短路，如果GG[i][j] == GG[i][k]+GG[k][j] 即为从i到j的最短路经过点k，<br><br>可以用迪杰斯特拉将最短路径的数目计算出来，经过点k的最短路数量等于num[i][k]*num[k][j];<br><br>Attention： 题目数据会爆int<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-20-bzoj1491社交网络（最短路计数+floyd）/#more" rel="contents">
@@ -642,8 +647,8 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-26T22:28:28+08:00">
-                2018-04-26
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-12T00:00:00+08:00">
+                2017-07-12
               </time>
             
           </span>
@@ -699,29 +704,12 @@ Code：1234567891011121314151617181920212223242526272829303132333435363738394041
 
       
         
-          
-          题目传送门 ：CodeForces - 566D题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。
-code:
-#include &ltbits/stdc++.h>
-#define inf 99999999
-
-using namespace std;
-typedef long long ll;
-const int maxn = 2e5+10;
-int n,q;
-int f[maxn];
-int h[maxn];
-int Next[maxn];
-void init(){
-    for(int i = 0 ; i &lt maxn ; i ++){
-        f[i] = i;
-        Next[i] = i + 1;
-    }
-    memset(h,0,sizeof(h));
-}
-int find(int x){
-    return f[x] == x ? x : f[
-          ...
+          <h1 id="题目传送门-：CodeForces-566D"><a href="#题目传送门-：CodeForces-566D" class="headerlink" title="题目传送门 ：CodeForces - 566D"></a>题目传送门 ：<a href="http://codeforces.com/problemset/problem/566/D" target="_blank" rel="noopener">CodeForces - 566D</a></h1><blockquote>
+<p>题意：<br>n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；<br>type = 3查询，如果在一个集合里输出YES，否则NO。</p>
+</blockquote>
+<blockquote>
+<p>思路:<br>由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-12-CodeForces - 566D(并查集区间合并)/#more" rel="contents">
@@ -822,8 +810,8 @@ int find(int x){
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T16:01:44+08:00">
-                2017-07-20
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-10T00:00:00+08:00">
+                2017-07-10
               </time>
             
           </span>
@@ -880,8 +868,10 @@ int find(int x){
       
         
           
-          题目传送门 ： HDU-3342题意：输入n,m。n代表所需要判断的人数，m是关系的数量，输入a,b代表a是b的师傅，判断输入是否合法，也就是说输入1,2、2,3、3,1是不合法的，裸的拓扑排序，存在环就是输出NO，否则YES。
-拓扑排序判断环的方法（DFS）：123456789101112131415161718192021222324bool dfs(int u)&#123;	book[u] = -1;//此处代表u这个节点正在递归进程中。	for(int i = 0 ; i &lt; n ; i ++)&#123;		if(G[u][i])&#123;			if(book[i] == -1)return false;//如果此点已经走过，代表存在环。			else if(book[i] == 0)&#123;				if(!dfs(i))return false;//对于没有访问到的点递归访问			&#125;		&#125;	&#125;	book[u] = 1;//访问完成标记。  topo[--t] = u;//topo数组保存拓扑排序的顺序。	return true;&#
+          题目传送门 ： HDU-3342
+题意：输入n,m。n代表所需要判断的人数，m是关系的数量，输入a,b代表a是b的师傅，判断输入是否合法，也就是说输入1,2、2,3、3,1是不合法的，裸的拓扑排序，存在环就是输出NO，否则YES。
+
+拓扑排序判断环的方法（DFS）：123456789101112131415161718192021222324bool dfs(int u)&#123;    book[u] = -1;//此处代表u这个节点正在递归进程中。    for(int i = 0 ; i &lt; n ; i ++)&#123;        if(G[u][i])&#123;            if(book[i] == -1)return false;//如果此点已经走过，代表存在环。            else if(book[i] == 0)&#123;                if(!dfs(i))return false;//对于没有访问到的点递归访问            &#125;        &#125;    &#125;    book[
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -983,8 +973,8 @@ int find(int x){
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-09T19:38:30+08:00">
-                2017-07-09
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-08T00:00:00+08:00">
+                2017-07-08
               </time>
             
           </span>
@@ -1040,10 +1030,12 @@ int find(int x){
 
       
         
-          
-          题目传送门 ： HDU-1010题意：X为障碍物，S为起点，D为终点。问可不可以恰好在t步数到达终点。可以就输出YES,否则NO。奇偶剪枝：从起点到终点的最短距离s = abs(x1-x2)+(y1-y2)，从起点到终点一定经过s + t步，其中t一定为偶数，具体证明详见:http://baike.baidu.com/link?url=hdOpozJVumFRtp78FhIzZVoo5E3y670MB7ujVuCnn4wBd1eWrQt4OBC65zmEvbuwE-AHZ5NIH0u9PI6da0hTLjSxwaNNgX4nlsGEqKWq8pZXYou6VWFtYljX5V9-fj7A#3
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include
-          ...
+          <h2 id="题目传送门-：-HDU-1010"><a href="#题目传送门-：-HDU-1010" class="headerlink" title="题目传送门 ： HDU-1010"></a>题目传送门 ： <a href="http://acm.hdu.edu.cn/showproblem.php?pid=1010" target="_blank" rel="noopener">HDU-1010</a></h2><blockquote>
+<p>题意：<br>X为障碍物，S为起点，D为终点。问可不可以<strong>恰好</strong>在t步数到达终点。<br>可以就输出YES,否则NO。</p>
+</blockquote>
+<h3 id="奇偶剪枝："><a href="#奇偶剪枝：" class="headerlink" title="奇偶剪枝："></a>奇偶剪枝：</h3><blockquote>
+<p>从起点到终点的最短距离s = abs(x1-x2)+(y1-y2)，从起点到终点一定经过s + t步，其中t一定为偶数.<br>具体证明详见:<a href="http://baike.baidu.com/link?url=hdOpozJVumFRtp78FhIzZVoo5E3y670MB7ujVuCnn4wBd1eWrQt4OBC65zmEvbuwE-AHZ5NIH0u9PI6da0hTLjSxwaNNgX4nlsGEqKWq8pZXYou6VWFtYljX5V9-fj7A#3" target="_blank" rel="noopener">http://baike.baidu.com/link?url=hdOpozJVumFRtp78FhIzZVoo5E3y670MB7ujVuCnn4wBd1eWrQt4OBC65zmEvbuwE-AHZ5NIH0u9PI6da0hTLjSxwaNNgX4nlsGEqKWq8pZXYou6VWFtYljX5V9-fj7A#3</a></p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-08-HDU - 1010 Tempter of the Bone (dfs+奇偶剪枝)/#more" rel="contents">
@@ -1160,7 +1152,7 @@ int find(int x){
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

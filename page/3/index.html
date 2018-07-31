@@ -963,7 +963,7 @@ x0=((y2-y1)(y3y3-y1y1+x3x3-x1x1)-(y3-y1)(y2y2-y1y1+x2x2-x1x1))/(2.0((x3-x1)(y2-y
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-27T10:19:26+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-27T00:00:00+08:00">
                 2017-07-27
               </time>
             
@@ -1020,11 +1020,9 @@ x0=((y2-y1)(y3y3-y1y1+x3x3-x1x1)-(y3-y1)(y2y2-y1y1+x2x2-x1x1))/(2.0((x3-x1)(y2-y
 
       
         
-          
-          题目传送门 ： UVA-11426题意：给定n，求解G123456G=0;for(i=1;i&lt;N;i++)  for(j=i+1;j&lt;=N;j++)  &#123;    G+=gcd(i,j);  &#125;
-思路：已知前n-1个数的解ans[n-1], 则ans[n] = ans[n-1] + gcd(1,n)+gcd(2,n)+···+gcd(n-1,n)设p[n]为n的欧拉函数值，如果gcd(x,n) == 1 , 则所有gcd(x,n)== 1 的和为 p[n]同理如果gcd(x,n) == y &lt;=&gt; gcd(x/y,n/y) == 1 , 即和为yp[n/y] 令f[n] = gcd(1,n)+gcd(2,n)+···+gcd(n-1,n) f[n] = sum(i  p[n/i])，其中i能被n整除。   既然i能被n整除，可以用筛法求出所有的f[n] , 复杂度为nlogn.
-欧拉函数：欧拉函数p[n]表示小于n且与n互质的数的数目。直接求解：1234567891011121314int solve(int n)&#123;	int m = 
-          ...
+          <h2 id="题目传送门-：-UVA-11426"><a href="#题目传送门-：-UVA-11426" class="headerlink" title="题目传送门 ： UVA-11426"></a>题目传送门 ： <a href="https://vjudge.net/problem/UVA-11426" target="_blank" rel="noopener">UVA-11426</a></h2><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
+<p>给定n，求解G<br><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">G=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;N;i++)</span><br><span class="line">  <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;=N;j++)</span><br><span class="line">  &#123;</span><br><span class="line">    G+=gcd(i,j);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-27-UVA-11426 GCD - Extreme (II)（欧拉函数应用）/#more" rel="contents">
@@ -1141,7 +1139,7 @@ x0=((y2-y1)(y3y3-y1y1+x3x3-x1x1)-(y3-y1)(y2y2-y1y1+x2x2-x1x1))/(2.0((x3-x1)(y2-y
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

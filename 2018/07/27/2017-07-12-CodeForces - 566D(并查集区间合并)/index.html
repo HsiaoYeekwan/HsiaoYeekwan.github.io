@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ACM," />
+  <meta name="keywords" content="ACM,并查集," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目传送门 ：CodeForces - 566D题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。 code: #include &amp;ltbits/stdc++.h&amp;gt; #define inf 999999">
-<meta name="keywords" content="ACM">
+<meta name="description" content="题目传送门 ：CodeForces - 566D 题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。   思路:由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。">
+<meta name="keywords" content="ACM,并查集">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces - 566D (并查集区间合并)">
 <meta property="og:url" content="http://yoursite.com/2018/07/27/2017-07-12-CodeForces - 566D(并查集区间合并)/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="题目传送门 ：CodeForces - 566D题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。 code: #include &amp;ltbits/stdc++.h&amp;gt; #define inf 999999">
+<meta property="og:description" content="题目传送门 ：CodeForces - 566D 题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。   思路:由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-26T14:28:28.545Z">
+<meta property="og:updated_time" content="2017-07-11T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces - 566D (并查集区间合并)">
-<meta name="twitter:description" content="题目传送门 ：CodeForces - 566D题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。 code: #include &amp;ltbits/stdc++.h&amp;gt; #define inf 999999">
+<meta name="twitter:description" content="题目传送门 ：CodeForces - 566D 题意：n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；type = 3查询，如果在一个集合里输出YES，否则NO。   思路:由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。">
 
 
 
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-26T22:28:28+08:00">
-                2018-04-26
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-12T00:00:00+08:00">
+                2017-07-12
               </time>
             
           </span>
@@ -374,72 +374,14 @@
       
 
       
-        <h1 id="题目传送门-：CodeForces-566D"><a href="#题目传送门-：CodeForces-566D" class="headerlink" title="题目传送门 ：CodeForces - 566D"></a>题目传送门 ：<a href="http://codeforces.com/problemset/problem/566/D" target="_blank" rel="noopener">CodeForces - 566D</a></h1><h3 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h3><p>n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；<br>type = 3查询，如果在一个集合里输出YES，否则NO。<br>由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。</p>
-<h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><pre name="code" class="c++">
-#include &ltbits/stdc++.h>
-#define inf 99999999
-
-using namespace std;
-typedef long long ll;
-const int maxn = 2e5+10;
-int n,q;
-int f[maxn];
-int h[maxn];
-int Next[maxn];
-void init(){
-    for(int i = 0 ; i &lt maxn ; i ++){
-        f[i] = i;
-        Next[i] = i + 1;
-    }
-    memset(h,0,sizeof(h));
-}
-int find(int x){
-    return f[x] == x ? x : f[x] = find(f[x]);
-}
-void unite(int x,int y){
-    x = find(x);
-    y = find(y);
-    if(x == y)return;
-    if(h[x] &lt h[y]){f[x] = y;}
-    else {
-        f[y] = x;
-        if(h[x] == h[y]){h[x] ++;}
-    }
-}
-void unite2(int x,int y){
-    for(int i = x + 1 ; i &lt= y ; ){
-        unite(i,x);
-        int t = Next[i];
-        Next[i] = Next[y];
-        i = t;
-    }
-}
-bool same(int x,int y){
-    return find(x) == find(y);
-}
-int main()
-{
-  //可以加快cin速度，但是cout有时也会超时
-  //此题scanf跑了300ms，cin 900ms.
-    ios::sync_with_stdio(false);
-    while(cin >> n >> q){
-        init();
-        for(int i = 0 ; i &lt q ; i ++){
-            int k,x,y;
-            cin >> k >> x >> y;
-            if(k == 3){
-                if(same(x,y)){printf("YES\n");}
-                else {printf("NO\n");}//这里cout会超时。
-            }
-            else if(k == 2){
-                unite2(x,y);
-            }
-            else if(k == 1){unite(x,y);}
-        }
-    }
-    return 0;
-}
-</pre>
+        <h1 id="题目传送门-：CodeForces-566D"><a href="#题目传送门-：CodeForces-566D" class="headerlink" title="题目传送门 ：CodeForces - 566D"></a>题目传送门 ：<a href="http://codeforces.com/problemset/problem/566/D" target="_blank" rel="noopener">CodeForces - 566D</a></h1><blockquote>
+<p>题意：<br>n个数编号为1~n,三种操作：type = 1：将x和y合并；type = 2：将[x,y]区间合并；<br>type = 3查询，如果在一个集合里输出YES，否则NO。</p>
+</blockquote>
+<blockquote>
+<p>思路:<br>由数据范围可知普通方法肯定TLE，这里用到一个Next数组，标记已经合并过的数。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 99999999</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> n,q;</span><br><span class="line"><span class="keyword">int</span> f[maxn];</span><br><span class="line"><span class="keyword">int</span> h[maxn];</span><br><span class="line"><span class="keyword">int</span> Next[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; maxn ; i ++)&#123;</span><br><span class="line">        f[i] = i;</span><br><span class="line">        Next[i] = i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">memset</span>(h,<span class="number">0</span>,<span class="keyword">sizeof</span>(h));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> f[x] == x ? x : f[x] = find(f[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">unite</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    x = find(x);</span><br><span class="line">    y = find(y);</span><br><span class="line">    <span class="keyword">if</span>(x == y)<span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span>(h[x] &lt; h[y])&#123;f[x] = y;&#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        f[y] = x;</span><br><span class="line">        <span class="keyword">if</span>(h[x] == h[y])&#123;h[x] ++;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">unite2</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = x + <span class="number">1</span> ; i &lt;= y ; )&#123;</span><br><span class="line">        unite(i,x);</span><br><span class="line">        <span class="keyword">int</span> t = Next[i];</span><br><span class="line">        Next[i] = Next[y];</span><br><span class="line">        i = t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">same</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> find(x) == find(y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="comment">//可以加快cin速度，但是cout有时也会超时</span></span><br><span class="line">  <span class="comment">//此题scanf跑了300ms，cin 900ms.</span></span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; q)&#123;</span><br><span class="line">        init();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; q ; i ++)&#123;</span><br><span class="line">            <span class="keyword">int</span> k,x,y;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; k &gt;&gt; x &gt;&gt; y;</span><br><span class="line">            <span class="keyword">if</span>(k == <span class="number">3</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(same(x,y))&#123;<span class="built_in">printf</span>(<span class="string">"YES\n"</span>);&#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;<span class="built_in">printf</span>(<span class="string">"NO\n"</span>);&#125;<span class="comment">//这里cout会超时。</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(k == <span class="number">2</span>)&#123;</span><br><span class="line">                unite2(x,y);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(k == <span class="number">1</span>)&#123;unite(x,y);&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -458,6 +400,8 @@ int main()
         <div class="post-tags">
           
             <a href="/tags/ACM/" rel="tag"># ACM</a>
+          
+            <a href="/tags/并查集/" rel="tag"># 并查集</a>
           
         </div>
       
@@ -585,7 +529,7 @@ int main()
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -618,7 +562,7 @@ int main()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目传送门-：CodeForces-566D"><span class="nav-number">1.</span> <span class="nav-text">题目传送门 ：CodeForces - 566D</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意："><span class="nav-number">1.0.1.</span> <span class="nav-text">题意：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">1.1.</span> <span class="nav-text">code:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题目传送门-：CodeForces-566D"><span class="nav-number">1.</span> <span class="nav-text">题目传送门 ：CodeForces - 566D</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">1.1.</span> <span class="nav-text">code:</span></a></li></ol></li></ol></div>
             
 
           </div>
