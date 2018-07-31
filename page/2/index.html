@@ -319,7 +319,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T15:50:06+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T00:00:00+08:00">
                 2017-12-11
               </time>
             
@@ -377,11 +377,17 @@
       
         
           
-          题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数
-输入描述:第一行一个数n第二行n个数表示序列an &lt;= 1e5 , 0 &lt;= a[i] &lt;= 10;
-输出描述:输出一个数表示答案
+          题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意
+给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数
+
+输入描述:
+第一行一个数n第二行n个数表示序列an &lt;= 1e5 , 0 &lt;= a[i] &lt;= 10;
+
+思路
+
 前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的一部分（前缀和）判断是否构成完全平方数。复杂度O(n*sqrt(n*10));
-code:123456789101112131415161718192021222324252627282930313233343536373839404142#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include &lt;cstdlib&gt;#include &lt;cstdio&gt;#i
+
+code:123456789101112131415161718192021222324252627282930313233343536373839404142#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include &lt;cstdlib&gt;#include &lt;cstdio&gt;#include
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -483,8 +489,8 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-11-22T22:07:14+08:00">
-                2017-11-22
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T00:00:00+08:00">
+                2017-11-21
               </time>
             
           </span>
@@ -540,11 +546,11 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
 
       
         
-          
-          题目传送门 ：HihoCoder-1636题目大意:石子归并，只不过第一行除了给出n，还给出L，R。每次合并必须合并相邻的k堆(L&lt;=k&lt;=R)求能不能合并成一堆，不能的话输出0，否则输出最小代价。
-思路北京现场赛的铜牌题，是个三维的区间dp，之前做的区间dp都是二维，这次懵逼了。dp[i][j][k]代表区间i-j分成k堆的最小代价。f(i,j,1) = min( f(i,k,p)+f(k+1,j,1)+sum(i,j) )(k = 1);f(i,j,k) = min( f(i,p,k-1)+f(p+1,j,1) )(k &gt; 1)关键就是枚举的时候,要把堆按照k-1堆和1堆合并来枚举答案,这样枚举复杂度是n^2,否则情况太复杂分成一堆的情况比较好想，注意枚举p的范围是[L-1,R-1];分成k堆的时候,注意不要+sum(i,j),因为k-1堆和1堆一共是k堆，并没有合并。这样总的时间复杂度是n^4。热身赛测机器时1e8的数据大概150ms,复杂度完全符合题目要求。
-123456789101112131415161718192021222324252627282930
-          ...
+          <h2 id="题目传送门-：HihoCoder-1636"><a href="#题目传送门-：HihoCoder-1636" class="headerlink" title="题目传送门 ：HihoCoder-1636"></a>题目传送门 ：<a href="https://hihocoder.com/problemset/problem/1636" target="_blank" rel="noopener">HihoCoder-1636</a></h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h3><blockquote>
+<p>石子归并，只不过第一行除了给出n，还给出L，R。<br>每次合并必须合并相邻的k堆(L&lt;=k&lt;=R)<br>求能不能合并成一堆，不能的话输出0，否则输出最小代价。</p>
+</blockquote>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>北京现场赛的铜牌题，是个三维的区间dp，之前做的区间dp都是二维，这次懵逼了。<br>dp[i][j][k]代表区间i-j分成k堆的最小代价。<br>f(i,j,1) = min( f(i,k,p)+f(k+1,j,1)+sum(i,j) )(k = 1);<br>f(i,j,k) = min( f(i,p,k-1)+f(p+1,j,1) )(k &gt; 1)<br>关键就是枚举的时候,要把堆按照k-1堆和1堆合并来枚举答案,这样枚举复杂度是n^2,否则情况太复杂<br>分成一堆的情况比较好想，注意枚举p的范围是[L-1,R-1];<br>分成k堆的时候,注意不要+sum(i,j),因为k-1堆和1堆一共是k堆，并没有合并。<br>这样总的时间复杂度是n^4。<br>热身赛测机器时1e8的数据大概150ms,复杂度完全符合题目要求。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-11-21-HihoCoder-1636（三维区间dp）/#more" rel="contents">
@@ -645,7 +651,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T18:27:25+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T00:00:00+08:00">
                 2017-10-31
               </time>
             
@@ -664,8 +670,8 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Others/" itemprop="url" rel="index">
-                    <span itemprop="name">Others</span>
+                  <a href="/categories/summary/" itemprop="url" rel="index">
+                    <span itemprop="name">summary</span>
                   </a>
                 </span>
 
@@ -703,7 +709,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
       
         
           
-          　25号凌晨三点半起的床，四点二十出发去机场。早上六点半的飞机，八点半到的福州，然后坐机场大巴去福建师范大学。到学生公寓大概十点半了，累的连出去吃饭的力气都没有，叫了外卖，吃完后睡了一觉。　不得不说南方的大学跟北方的大学有很大不同。住宿风格完全不一样，南方是那种小区似的生活区，看起来才有大学的感觉，瞬间觉得自己上的是个加强型高中。我们住的楼对过就是女生宿舍，表示如果不关门啥都能看见。去的第一天下午醒来之后晚上打车去附近的万达搓了一顿，然后就坐公交回住的地方。福州的公交车是复古风吗？居然有跟博山十年前一样的公交车，而且公交车上挺破的，比青岛差远了。不知道为什么，很喜欢福建人说话的口音。晚上回到公寓，没想到福州晚上这么疯狂，我们后面那个楼下面说话声没停过，那个门有一道缝，外面的喧闹声弄得我晚上没睡着，最后一次看表已经快两点了。早上六点半起的床，去比赛场地。　不得不说，CSP比赛是真的累啊，比赛一共是13个小时，本打算下午六点前出来的，第二个题不知道为什么错，总是过不了，一直到晚上9.30左右，实在累得不行就提前出来了（结束时间是晚上10.00），最后交的是纯暴力的程序，水了15分，没想到居
+          　&gt;25号凌晨三点半起的床，四点二十出发去机场。早上六点半的飞机，八点半到的福州，然后坐机场大巴去福建师范大学。到学生公寓大概十点半了，累的连出去吃饭的力气都没有，叫了外卖，吃完后睡了一觉。　不得不说南方的大学跟北方的大学有很大不同。住宿风格完全不一样，南方是那种小区似的生活区，看起来才有大学的感觉，瞬间觉得自己上的是个加强型高中。我们住的楼对过就是女生宿舍，表示如果不关门啥都能看见。去的第一天下午醒来之后晚上打车去附近的万达搓了一顿，然后就坐公交回住的地方。福州的公交车是复古风吗？居然有跟博山十年前一样的公交车，而且公交车上挺破的，比青岛差远了。不知道为什么，很喜欢福建人说话的口音。晚上回到公寓，没想到福州晚上这么疯狂，我们后面那个楼下面说话声没停过，那个门有一道缝，外面的喧闹声弄得我晚上没睡着，最后一次看表已经快两点了。早上六点半起的床，去比赛场地。　不得不说，CSP比赛是真的累啊，比赛一共是13个小时，本打算下午六点前出来的，第二个题不知道为什么错，总是过不了，一直到晚上9.30左右，实在累得不行就提前出来了（结束时间是晚上10.00），最后交的是纯暴力的程序，水了15分，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -805,7 +811,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T17:30:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T00:00:00+08:00">
                 2017-10-31
               </time>
             
@@ -824,8 +830,8 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Others/" itemprop="url" rel="index">
-                    <span itemprop="name">Others</span>
+                  <a href="/categories/summary/" itemprop="url" rel="index">
+                    <span itemprop="name">summary</span>
                   </a>
                 </span>
 
@@ -863,7 +869,14 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
       
         
           
-          　27号晚上到的西安，睡了一觉后早上起来与学长回合。酒店很舒服，休息的很好，精力很充沛。这次icpc比赛是我第一次参加区域赛。热身赛比较崩，上来三个题，很快读懂了题意，A题猜了一次就过。我写的B题模拟无论怎么输入都只输出一种结果，弄得我很是头晕，甚至怀疑是不是cb卡了之类的。队友的C题也是迷之WA。最后半小时就没再继续搞这两个题，测试了一下Java和其他的编译环境，结果Java无论怎么提交都是ce，跟志愿者反馈，技术人员来了之后按照他的方法提交还是ce，然后热身赛就结束了，一直没有编译通过。热身赛结束后问了学长和提交过Java的同学，貌似和我们的提交方法都一样，因为这个，心里还是稍微有点慌的。　正式赛开始后，氛围明显不一样，说实话心里是有点紧张的。上来第一个水题错了两次才过，差点背锅。第二题yxm猜了一发过了，第三题是线段树+贪心，xq拿分块过了。第二题第三题都是1A，过的还算顺利，这时候比赛已经三个小时了。我把剩下的所有的题都读了一遍，G题和我们组队赛做过的一个题很类似，但是加了一个q次查询，我们一起想了半天的G题，发现根本不会处理，时间大概还剩下一个半小时的时候，我们决定放弃G，一
+          
+###赛前
+
+ 27号晚上到的西安，睡了一觉后早上起来与学长回合。酒店很舒服，休息的很好，精力很充沛。这次icpc比赛是我第一次参加区域赛。热身赛比较崩，上来三个题，很快读懂了题意，A题猜了一次就过。我写的B题模拟无论怎么输入都只输出一种结果，弄得我很是头晕，甚至怀疑是不是cb卡了之类的。队友的C题也是迷之WA。最后半小时就没再继续搞这两个题，测试了一下Java和其他的编译环境，结果Java无论怎么提交都是ce，跟志愿者反馈，技术人员来了之后按照他的方法提交还是ce，然后热身赛就结束了，一直没有编译通过。热身赛结束后问了学长和提交过Java的同学，貌似和我们的提交方法都一样，因为这个，心里还是稍微有点慌的。
+
+###正式赛
+
+比赛开始后，氛围明显不一样，说实话心里是有点紧张的。上来第一个水题错了两次才过，差点背锅。第二题yxm猜了一发过了，第三题是线段树+贪心，xq拿分块过了。第二题第三题都是1A，过的还算顺利，这时候比赛已经三个小时了。我把剩下的所有的题都读了一遍，G题和我们组队赛做过的一个题很类似，但是加了一个q次查询，我们一起想了半天的G题，发现根本不会处理，时间大概还剩下一个
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -965,8 +978,8 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T10:48:14+08:00">
-                2017-10-31
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-20T00:00:00+08:00">
+                2017-10-20
               </time>
             
           </span>
@@ -1022,11 +1035,9 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
 
       
         
-          
-          题目传送门：UVA-1374
-题意给定一个数n，让你求从1至少要做多少次乘除才可以从 x 得到 x^n;迭代加深搜索，由已经得到的数两两加减（大于0且无重复），找到答案即break；
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#include &lt;cstdlib&gt;#include &lt;cstdio&gt;#include &lt;string&gt;#include &lt;algorithm&gt;#include &lt;queue&gt;#include &lt;map&gt;#include 
-          ...
+          <h2 id="题目传送门："><a href="#题目传送门：" class="headerlink" title="题目传送门："></a>题目传送门：</h2><p><a href="httpsvjudge.netproblemUVA-1374">UVA-1374</a></p>
+<h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>给定一个数n，让你求从1至少要做多少次乘除才可以从 x 得到 x^n;<br><br>迭代加深搜索，由已经得到的数两两加减（大于0且无重复），找到答案即break；<br><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-10-20-UVA-1374 Power Calculus(IDA)/#more" rel="contents">
@@ -1121,7 +1132,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1132,7 +1143,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1143,7 +1154,7 @@ code:123456789101112131415161718192021222324252627282930313233343536373839404142
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

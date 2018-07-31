@@ -965,7 +965,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-30T17:08:38+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-30T00:00:00+08:00">
                 2018-01-30
               </time>
             
@@ -1024,8 +1024,10 @@
         
           
           题目传送门 ： UVA-1153
-思路: 因为所求的最多串行执行任务数，很容易想到先执行结束时间越早的任务; 所以先按照结束时间对任务进行排序。 从第一个任务开始枚举,我们可以记录一下完成当前任务完成后的时间，如果超出 了结束时间，也就是说我们必须舍弃一个任务，根据贪心策略，舍弃的任务的执行时间 尽量长，以便于给后面的任务空出尽量多的时间。（因为我们求的只是最多可串行任务数量）. 所以可以用一个优先队列存一下执行过任务的执行时间，舍弃任务的时候便从队头元素取。 队列中的元素数量即是答案。
- 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#includ
+思路:
+因为所求的最多串行执行任务数，很容易想到先执行结束时间越早的任务; 所以先按照结束时间对任务进行排序。 从第一个任务开始枚举,我们可以记录一下完成当前任务完成后的时间，如果超出 了结束时间，也就是说我们必须舍弃一个任务，根据贪心策略，舍弃的任务的执行时间 尽量长，以便于给后面的任务空出尽量多的时间。（因为我们求的只是最多可串行任务数量）. 所以可以用一个优先队列存一下执行过任务的执行时间，舍弃任务的时候便从队头元素取。 队列中的元素数量即是答案。
+
+ 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#inclu
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1121,7 +1123,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1132,7 +1134,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1143,7 +1145,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

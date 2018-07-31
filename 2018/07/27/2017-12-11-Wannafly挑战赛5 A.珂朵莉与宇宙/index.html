@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ACM," />
+  <meta name="keywords" content="ACM,思维," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数 输入描述:第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10; 输出描述:输出一个数表示答案 前缀和思想，因为区间连续，枚举区间的最后一位（一共n种">
-<meta name="keywords" content="ACM">
+<meta name="description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
+<meta name="keywords" content="ACM,思维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wannafly挑战赛5 A.珂朵莉与宇宙">
 <meta property="og:url" content="http://yoursite.com/2018/07/27/2017-12-11-Wannafly挑战赛5 A.珂朵莉与宇宙/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数 输入描述:第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10; 输出描述:输出一个数表示答案 前缀和思想，因为区间连续，枚举区间的最后一位（一共n种">
+<meta property="og:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-11T07:50:06.638Z">
+<meta property="og:updated_time" content="2017-12-10T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Wannafly挑战赛5 A.珂朵莉与宇宙">
-<meta name="twitter:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数 输入描述:第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10; 输出描述:输出一个数表示答案 前缀和思想，因为区间连续，枚举区间的最后一位（一共n种">
+<meta name="twitter:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
 
 
 
@@ -318,7 +318,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T15:50:06+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T00:00:00+08:00">
                 2017-12-11
               </time>
             
@@ -374,11 +374,17 @@
       
 
       
-        <h2 id="题目链接-：https-www-nowcoder-com-acm-contest-36-A"><a href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A" class="headerlink" title="题目链接 ：https://www.nowcoder.com/acm/contest/36/A"></a>题目链接 ：<a href="https://www.nowcoder.com/acm/contest/36/A" target="_blank" rel="noopener">https://www.nowcoder.com/acm/contest/36/A</a></h2><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><p>给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数<br></p>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><p>第一行一个数n<br><br>第二行n个数表示序列a<br><br>n &lt;= 1e5 , 0 &lt;= a[i] &lt;= 10;<br></p>
-<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><p>输出一个数表示答案<br></p>
-<p><big><big><big>前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），<br>去掉前面的一部分（前缀和）判断是否构成完全平方数。复杂度O(n*sqrt(n*10));</big></big></big></p>
-<h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, <span class="meta-string">"/STACK:102400000,102400000"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 999999999</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> cnt[maxn];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; n)&#123;</span><br><span class="line">		<span class="keyword">int</span> x;</span><br><span class="line">		ll ans = <span class="number">0</span>;</span><br><span class="line">		cnt[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">			sum += x;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j * j &lt;= sum ; j ++)&#123;</span><br><span class="line">				ans += cnt[sum - j * j];</span><br><span class="line">			&#125;</span><br><span class="line">			cnt[sum] ++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="题目链接-：https-www-nowcoder-com-acm-contest-36-A"><a href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A" class="headerlink" title="题目链接 ：https://www.nowcoder.com/acm/contest/36/A"></a>题目链接 ：<a href="https://www.nowcoder.com/acm/contest/36/A" target="_blank" rel="noopener">https://www.nowcoder.com/acm/contest/36/A</a></h2><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数<br></p>
+</blockquote>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
+<p>第一行一个数n<br>第二行n个数表示序列a<br>n &lt;= 1e5 , 0 &lt;= a[i] &lt;= 10;</p>
+</blockquote>
+<p>思路</p>
+<blockquote>
+<p>前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），<br>去掉前面的一部分（前缀和）判断是否构成完全平方数。复杂度O(n*sqrt(n*10));</p>
+</blockquote>
+<h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, <span class="meta-string">"/STACK:102400000,102400000"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 999999999</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> cnt[maxn];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; n)&#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        ll ans = <span class="number">0</span>;</span><br><span class="line">        cnt[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">            sum += x;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j * j &lt;= sum ; j ++)&#123;</span><br><span class="line">                ans += cnt[sum - j * j];</span><br><span class="line">            &#125;</span><br><span class="line">            cnt[sum] ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -397,6 +403,8 @@
         <div class="post-tags">
           
             <a href="/tags/ACM/" rel="tag"># ACM</a>
+          
+            <a href="/tags/思维/" rel="tag"># 思维</a>
           
         </div>
       
@@ -502,7 +510,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -513,7 +521,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -524,7 +532,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -557,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A"><span class="nav-number">1.</span> <span class="nav-text">题目链接 ：https://www.nowcoder.com/acm/contest/36/A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.</span> <span class="nav-text">题意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入描述"><span class="nav-number">2.1.</span> <span class="nav-text">输入描述:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出描述"><span class="nav-number">2.2.</span> <span class="nav-text">输出描述:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">3.</span> <span class="nav-text">code:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A"><span class="nav-number">1.</span> <span class="nav-text">题目链接 ：https://www.nowcoder.com/acm/contest/36/A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.</span> <span class="nav-text">题意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入描述"><span class="nav-number">2.1.</span> <span class="nav-text">输入描述:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">3.</span> <span class="nav-text">code:</span></a></li></ol></div>
             
 
           </div>
