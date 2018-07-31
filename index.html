@@ -1022,13 +1022,10 @@
 
       
         
-          
-          题目传送门 ： UVA-1153
-思路:
-因为所求的最多串行执行任务数，很容易想到先执行结束时间越早的任务; 所以先按照结束时间对任务进行排序。 从第一个任务开始枚举,我们可以记录一下完成当前任务完成后的时间，如果超出 了结束时间，也就是说我们必须舍弃一个任务，根据贪心策略，舍弃的任务的执行时间 尽量长，以便于给后面的任务空出尽量多的时间。（因为我们求的只是最多可串行任务数量）. 所以可以用一个优先队列存一下执行过任务的执行时间，舍弃任务的时候便从队头元素取。 队列中的元素数量即是答案。
-
- 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465#pragma comment(linker, "/STACK:102400000,102400000")#include &lt;iostream&gt;#include &lt;cstring&gt;#include &lt;cmath&gt;#inclu
-          ...
+          <h2 id="题目传送门-："><a href="#题目传送门-：" class="headerlink" title="题目传送门 ："></a>题目传送门 ：</h2><p> <a href="https://vjudge.net/problem/UVA-1153" target="_blank" rel="noopener">UVA-1153</a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h3><blockquote>
+<p>因为所求的最多串行执行任务数，很容易想到先执行结束时间越早的任务;<br> 所以先按照结束时间对任务进行排序。<br> 从第一个任务开始枚举,我们可以记录一下完成当前任务完成后的时间，如果超出<br> 了结束时间，也就是说我们必须舍弃一个任务，根据贪心策略，舍弃的任务的执行时间<br> 尽量长，以便于给后面的任务空出尽量多的时间。（因为我们求的只是最多可串行任务数量）.<br> 所以可以用一个优先队列存一下执行过任务的执行时间，舍弃任务的时候便从队头元素取。<br> 队列中的元素数量即是答案。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2018-01-30-UVA-1153 Keep the Customer Satisfied(贪心)/#more" rel="contents">
@@ -1123,7 +1120,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1145,7 +1142,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

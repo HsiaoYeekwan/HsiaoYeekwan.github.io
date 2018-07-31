@@ -705,12 +705,8 @@
 
       
         
-          
-          题目传送门 ： HDU-3342
-题意：输入n,m。n代表所需要判断的人数，m是关系的数量，输入a,b代表a是b的师傅，判断输入是否合法，也就是说输入1,2、2,3、3,1是不合法的，裸的拓扑排序，存在环就是输出NO，否则YES。
-
-拓扑排序判断环的方法（DFS）：123456789101112131415161718192021222324bool dfs(int u)&#123;    book[u] = -1;//此处代表u这个节点正在递归进程中。    for(int i = 0 ; i &lt; n ; i ++)&#123;        if(G[u][i])&#123;            if(book[i] == -1)return false;//如果此点已经走过，代表存在环。            else if(book[i] == 0)&#123;                if(!dfs(i))return false;//对于没有访问到的点递归访问            &#125;        &#125;    &#125;    book[
-          ...
+          <h1 id="题目传送门-：-HDU-3342"><a href="#题目传送门-：-HDU-3342" class="headerlink" title="题目传送门 ： HDU-3342"></a>题目传送门 ： <a href="http://acm.hdu.edu.cn/showproblem.php?pid=3342" target="_blank" rel="noopener">HDU-3342</a></h1><blockquote>
+<p>题意：<br>输入n,m。n代表所需要判断的人数，m是关系的数量，输入a,b代表a是b的师傅，判断输入是否合法，也就是说输入<br>1,2、2,3、3,1是不合法的，裸的拓扑排序，存在环就是输出NO，否则YES。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/27/2017-07-10-HDU-3342 Legal or Not(拓扑排序判断环)/#more" rel="contents">
@@ -1135,7 +1131,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1157,7 +1153,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
