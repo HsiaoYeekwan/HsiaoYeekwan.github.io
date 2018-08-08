@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round #500 (Div. 2) E.Hills (DP)
+title: Codeforces Round \#500 (Div. 2) E.Hills (DP)
 date: 2018-08-08 20:01:50
 tags: [dp,codeforces]
 category: ACM
