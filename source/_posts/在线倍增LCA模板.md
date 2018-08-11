@@ -5,9 +5,13 @@ tags: [LCA,模板]
 category: ACM
 mathjax: true
 ---
+
+## LCA在线倍增，单词查询O(lgn)
 <!--more-->
 
 ```c
+const int maxn = 1e5+10;
+int dep[maxn] , p[maxn][20];
 void dfs(int u, int fa)
 {
     for(int i = 0 ; i < G[u].size() ; i ++)
