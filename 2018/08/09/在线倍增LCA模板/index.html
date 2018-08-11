@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="123456789101112131415161718192021222324252627282930313233void dfs(int u, int fa)&amp;#123;    for(int i = 0 ; i &amp;lt; G[u].size() ; i ++)    &amp;#123;        int v =G[u][i];        if(v == fa) continue;">
+<meta name="description" content="LCA在线倍增，单词查询O(lgn)">
 <meta name="keywords" content="模板,LCA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在线倍增LCA模板">
 <meta property="og:url" content="http://xyk1998.cn/2018/08/09/在线倍增LCA模板/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233void dfs(int u, int fa)&amp;#123;    for(int i = 0 ; i &amp;lt; G[u].size() ; i ++)    &amp;#123;        int v =G[u][i];        if(v == fa) continue;">
+<meta property="og:description" content="LCA在线倍增，单词查询O(lgn)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-11T12:43:07.025Z">
+<meta property="og:updated_time" content="2018-08-11T12:47:17.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在线倍增LCA模板">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233void dfs(int u, int fa)&amp;#123;    for(int i = 0 ; i &amp;lt; G[u].size() ; i ++)    &amp;#123;        int v =G[u][i];        if(v == fa) continue;">
+<meta name="twitter:description" content="LCA在线倍增，单词查询O(lgn)">
 
 
 
@@ -325,7 +325,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-11T20:43:07+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-11T20:47:17+08:00">
                 2018-08-11
               </time>
             
@@ -386,8 +386,8 @@
       
 
       
-        <a id="more"></a>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; G[u].size() ; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> v =G[u][i];</span><br><span class="line">        <span class="keyword">if</span>(v == fa) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>(! dep[v])</span><br><span class="line">            dep[v] = dep[u] + <span class="number">1</span>, p[v][<span class="number">0</span>] = u, dfs(v, u);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">lca_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dep, <span class="number">0</span>, <span class="keyword">sizeof</span> dep);</span><br><span class="line">    <span class="keyword">int</span> root;<span class="comment">//一定要选择入度为0的点为根节点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">if</span>(in[i] == <span class="number">0</span>) root = i;</span><br><span class="line">    dep[root] = <span class="number">1</span>;</span><br><span class="line">    dfs(root, <span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; (<span class="number">1</span>&lt;&lt;j) &lt;= n; j++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            p[i][j] = p[p[i][j<span class="number">-1</span>]][j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(dep[v] &lt; dep[u]) swap(v, u);</span><br><span class="line">    <span class="keyword">int</span> d = dep[v] - dep[u];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; (d&gt;&gt;i) != <span class="number">0</span>; i++)</span><br><span class="line">        <span class="keyword">if</span>((d&gt;&gt;i) &amp; <span class="number">1</span>) v = p[v][i];</span><br><span class="line">    <span class="keyword">if</span>(v == u) <span class="keyword">return</span> v;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">20</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        <span class="keyword">if</span>(p[v][i] != p[u][i]) v = p[v][i], u = p[u][i];</span><br><span class="line">    <span class="keyword">return</span> p[v][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="LCA在线倍增，单词查询O-lgn"><a href="#LCA在线倍增，单词查询O-lgn" class="headerlink" title="LCA在线倍增，单词查询O(lgn)"></a>LCA在线倍增，单词查询O(lgn)</h2><a id="more"></a>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> dep[maxn] , p[maxn][<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; G[u].size() ; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> v =G[u][i];</span><br><span class="line">        <span class="keyword">if</span>(v == fa) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>(! dep[v])</span><br><span class="line">            dep[v] = dep[u] + <span class="number">1</span>, p[v][<span class="number">0</span>] = u, dfs(v, u);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">lca_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dep, <span class="number">0</span>, <span class="keyword">sizeof</span> dep);</span><br><span class="line">    <span class="keyword">int</span> root;<span class="comment">//一定要选择入度为0的点为根节点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">if</span>(in[i] == <span class="number">0</span>) root = i;</span><br><span class="line">    dep[root] = <span class="number">1</span>;</span><br><span class="line">    dfs(root, <span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; (<span class="number">1</span>&lt;&lt;j) &lt;= n; j++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            p[i][j] = p[p[i][j<span class="number">-1</span>]][j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(dep[v] &lt; dep[u]) swap(v, u);</span><br><span class="line">    <span class="keyword">int</span> d = dep[v] - dep[u];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; (d&gt;&gt;i) != <span class="number">0</span>; i++)</span><br><span class="line">        <span class="keyword">if</span>((d&gt;&gt;i) &amp; <span class="number">1</span>) v = p[v][i];</span><br><span class="line">    <span class="keyword">if</span>(v == u) <span class="keyword">return</span> v;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">20</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        <span class="keyword">if</span>(p[v][i] != p[u][i]) v = p[v][i], u = p[u][i];</span><br><span class="line">    <span class="keyword">return</span> p[v][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -485,8 +485,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -566,6 +575,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LCA在线倍增，单词查询O-lgn"><span class="nav-number">1.</span> <span class="nav-text">LCA在线倍增，单词查询O(lgn)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
