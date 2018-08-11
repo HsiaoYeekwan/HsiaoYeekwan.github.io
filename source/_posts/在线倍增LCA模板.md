@@ -5,6 +5,7 @@ tags: [LCA,模板]
 category: ACM
 mathjax: true
 ---
+<!--more-->
 
 ```c
 void dfs(int u, int fa)

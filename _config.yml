@@ -5,7 +5,7 @@
 # Site
 title: 风中追风
 subtitle: Happy coding, happy life
-description: Just Do It!
+description: 真心 正义 无畏 同情
 keywords:
 author: HsiaoYeekwan
 language: zh-Hans
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://xyk1998.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -79,5 +79,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:HsiaoYeekwan/HsiaoYeekwan.github.io.git
+  repository: 
+    - git@github.com:HsiaoYeekwan/HsiaoYeekwan.github.io.git
+    - git@git.coding.net:HsiaoYeekwan/HsiaoYeekwan.coding.me.git
   branch: master
