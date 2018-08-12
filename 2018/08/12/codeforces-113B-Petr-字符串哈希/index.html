@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="ACM,思维," />
+  <meta name="keywords" content="ACM,字符串,哈希," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
-<meta name="keywords" content="ACM,思维">
+<meta name="description" content="题目链接codeforces 113B">
+<meta name="keywords" content="ACM,字符串,哈希">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wannafly挑战赛5 A.珂朵莉与宇宙">
-<meta property="og:url" content="http://xyk1998.cn/2018/08/07/2017-12-11-Wannafly挑战赛5 A.珂朵莉与宇宙/index.html">
+<meta property="og:title" content="codeforces 113B Petr#(字符串哈希)">
+<meta property="og:url" content="http://xyk1998.cn/2018/08/12/codeforces-113B-Petr-字符串哈希/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
+<meta property="og:description" content="题目链接codeforces 113B">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-10T16:00:00.000Z">
+<meta property="og:updated_time" content="2018-08-12T03:42:59.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wannafly挑战赛5 A.珂朵莉与宇宙">
-<meta name="twitter:description" content="题目链接 ：https://www.nowcoder.com/acm/contest/36/A题意 给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数  输入描述: 第一行一个数n第二行n个数表示序列an &amp;lt;= 1e5 , 0 &amp;lt;= a[i] &amp;lt;= 10;  思路  前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），去掉前面的">
+<meta name="twitter:title" content="codeforces 113B Petr#(字符串哈希)">
+<meta name="twitter:description" content="题目链接codeforces 113B">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://xyk1998.cn/2018/08/07/2017-12-11-Wannafly挑战赛5 A.珂朵莉与宇宙/"/>
+  <link rel="canonical" href="http://xyk1998.cn/2018/08/12/codeforces-113B-Petr-字符串哈希/"/>
 
 
 
 
 
-  <title>Wannafly挑战赛5 A.珂朵莉与宇宙 | 风中追风</title>
+  <title>codeforces 113B Petr#(字符串哈希) | 风中追风</title>
   
 
 
@@ -280,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/07/2017-12-11-Wannafly挑战赛5 A.珂朵莉与宇宙/">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/12/codeforces-113B-Petr-字符串哈希/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HsiaoYeekwan">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Wannafly挑战赛5 A.珂朵莉与宇宙</h1>
+          <h1 class="post-title" itemprop="name headline">codeforces 113B Petr#(字符串哈希)</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T09:37:22+08:00">
-                2018-08-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T11:34:43+08:00">
+                2018-08-12
               </time>
             
 
@@ -325,8 +325,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-12-11T00:00:00+08:00">
-                2017-12-11
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-12T11:42:59+08:00">
+                2018-08-12
               </time>
             
           </span>
@@ -386,17 +386,14 @@
       
 
       
-        <h2 id="题目链接-：https-www-nowcoder-com-acm-contest-36-A"><a href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A" class="headerlink" title="题目链接 ：https://www.nowcoder.com/acm/contest/36/A"></a>题目链接 ：<a href="https://www.nowcoder.com/acm/contest/36/A" target="_blank" rel="noopener">https://www.nowcoder.com/acm/contest/36/A</a></h2><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
-<p>给你一个长为n的序列a，有n*(n+1)/2个子区间,问这些子区间里面和为完全平方数的子区间个数<br></p>
+        <h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="http://codeforces.com/problemset/problem/113/B" target="_blank" rel="noopener">codeforces 113B</a></p>
+<a id="more"></a>
+<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><blockquote>
+<p>给出三个字符串s,st,ed<br>问有多少个连续子串的前缀是st，后缀是ed<br>字符串长度均小于2000</p>
 </blockquote>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><blockquote>
-<p>第一行一个数n<br>第二行n个数表示序列a<br>n &lt;= 1e5 , 0 &lt;= a[i] &lt;= 10;</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>因为要求的是连续子串，很容易想到hash<br>从st串与s串匹配的位置开始，暴力往后寻找与ed串匹配的位置，将hash值插入到vector里面最后计数即可<br>需要注意有可能匹配到的ed串的尾部可能会小于st串的尾部，这种情况需要特殊处理一下<br>直接unsigned long long自动取模就可以了<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2000</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> ll p = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">char</span> s[maxn] , st[maxn] , ed[maxn];</span><br><span class="line">ull hash1[maxn] , f[maxn] , hashst[maxn] , hashed[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    f[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt; maxn ; i ++)&#123;</span><br><span class="line">        f[i] = f[i<span class="number">-1</span>] * p;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Hash</span><span class="params">(<span class="keyword">char</span> *s , ull *hash1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = <span class="built_in">strlen</span>(s);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= len ; i ++)&#123;</span><br><span class="line">        hash1[i] = hash1[i<span class="number">-1</span>] * p + (s[i<span class="number">-1</span>] - <span class="string">'a'</span> + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ull <span class="title">getHash</span><span class="params">(<span class="keyword">int</span> l , <span class="keyword">int</span> r , ull *hash1)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ull tmp = hash1[r] - hash1[l<span class="number">-1</span>] * f[r-l+<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s%s%s"</span> , s , st , ed);</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">int</span> len1 = <span class="built_in">strlen</span>(st);</span><br><span class="line">    <span class="keyword">int</span> len2 = <span class="built_in">strlen</span>(ed);</span><br><span class="line">    Hash(s , hash1) ;</span><br><span class="line">    Hash(st , hashst) ;</span><br><span class="line">    Hash(ed , hashed);</span><br><span class="line">    ll q1 = getHash(<span class="number">1</span> , len1 , hashst);</span><br><span class="line">    ll q2 = getHash(<span class="number">1</span> , len2 , hashed);</span><br><span class="line">    <span class="built_in">vector</span>&lt;ull&gt; vec;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(i + len1 - <span class="number">1</span> &gt; n)<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(q1 == getHash(i , i + len1<span class="number">-1</span> , hash1))&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i ; j &lt;= n ; j ++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j + len2 - <span class="number">1</span> &gt; n)<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">if</span>(j + len2 - <span class="number">1</span> &lt; i + len1 - <span class="number">1</span>)<span class="keyword">continue</span>;<span class="comment">//判断ed字符串的结尾是否小于st字符串的结尾</span></span><br><span class="line">                <span class="keyword">if</span>(q2 == getHash(j , j + len2 - <span class="number">1</span> , hash1))&#123;</span><br><span class="line">                    vec.push_back(getHash(i , j + len2 - <span class="number">1</span> , hash1));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(vec.begin() , vec.end());</span><br><span class="line">    <span class="keyword">int</span> ans = unique(vec.begin() , vec.end()) - vec.begin();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span> , ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>思路</p>
-<blockquote>
-<p>前缀和思想，因为区间连续，枚举区间的最后一位（一共n种），<br>去掉前面的一部分（前缀和）判断是否构成完全平方数。复杂度O(n*sqrt(n*10));<br><a id="more"></a></p>
-</blockquote>
-<h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, <span class="meta-string">"/STACK:102400000,102400000"</span>)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cctype&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 999999999</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 0.000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> cnt[maxn];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; n)&#123;</span><br><span class="line">        <span class="keyword">int</span> x;</span><br><span class="line">        ll ans = <span class="number">0</span>;</span><br><span class="line">        cnt[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">            sum += x;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span> ; j * j &lt;= sum ; j ++)&#123;</span><br><span class="line">                ans += cnt[sum - j * j];</span><br><span class="line">            &#125;</span><br><span class="line">            cnt[sum] ++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -416,7 +413,9 @@
           
             <a href="/tags/ACM/" rel="tag"># ACM</a>
           
-            <a href="/tags/思维/" rel="tag"># 思维</a>
+            <a href="/tags/字符串/" rel="tag"># 字符串</a>
+          
+            <a href="/tags/哈希/" rel="tag"># 哈希</a>
           
         </div>
       
@@ -429,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/07/2018-01-30-UVA-1153 Keep the Customer Satisfied(贪心)/" rel="next" title="UVA-1153 Keep the Customer Satisfied(贪心)">
-                <i class="fa fa-chevron-left"></i> UVA-1153 Keep the Customer Satisfied(贪心)
+              <a href="/2018/08/09/在线倍增LCA模板/" rel="next" title="在线倍增LCA模板">
+                <i class="fa fa-chevron-left"></i> 在线倍增LCA模板
               </a>
             
           </div>
@@ -438,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/07/2018-04-19-HDU-6191 Query on A Tree(dfs序+可持久化字典树)/" rel="prev" title="HDU-6191 Query on A Tree(dfs序+可持久化字典树)">
-                HDU-6191 Query on A Tree(dfs序+可持久化字典树) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -598,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目链接-：https-www-nowcoder-com-acm-contest-36-A"><span class="nav-number">1.</span> <span class="nav-text">题目链接 ：https://www.nowcoder.com/acm/contest/36/A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题意"><span class="nav-number">2.</span> <span class="nav-text">题意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入描述"><span class="nav-number">2.1.</span> <span class="nav-text">输入描述:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code"><span class="nav-number">3.</span> <span class="nav-text">code:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
             
 
           </div>
