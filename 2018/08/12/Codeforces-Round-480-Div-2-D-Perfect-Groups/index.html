@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="模板,LCA," />
+  <meta name="keywords" content="思维,数学,codeforces," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="LCA在线倍增，单词查询O(lgn)">
-<meta name="keywords" content="模板,LCA">
+<meta name="description" content="题目链接codeforces 980D  SaMer has written the greatest test case of all time for one of his problems. For a given array of integers, the problem asks to find the minimum number of groups the array can be">
+<meta name="keywords" content="思维,数学,codeforces">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在线倍增LCA模板">
-<meta property="og:url" content="http://xyk1998.cn/2018/08/09/在线倍增LCA模板/index.html">
+<meta property="og:title" content="Codeforces Round #480 (Div. 2) D - Perfect Groups(数学+思维)">
+<meta property="og:url" content="http://xyk1998.cn/2018/08/12/Codeforces-Round-480-Div-2-D-Perfect-Groups/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="LCA在线倍增，单词查询O(lgn)">
+<meta property="og:description" content="题目链接codeforces 980D  SaMer has written the greatest test case of all time for one of his problems. For a given array of integers, the problem asks to find the minimum number of groups the array can be">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-11T12:47:17.299Z">
+<meta property="og:updated_time" content="2018-08-12T10:38:14.039Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在线倍增LCA模板">
-<meta name="twitter:description" content="LCA在线倍增，单词查询O(lgn)">
+<meta name="twitter:title" content="Codeforces Round #480 (Div. 2) D - Perfect Groups(数学+思维)">
+<meta name="twitter:description" content="题目链接codeforces 980D  SaMer has written the greatest test case of all time for one of his problems. For a given array of integers, the problem asks to find the minimum number of groups the array can be">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://xyk1998.cn/2018/08/09/在线倍增LCA模板/"/>
+  <link rel="canonical" href="http://xyk1998.cn/2018/08/12/Codeforces-Round-480-Div-2-D-Perfect-Groups/"/>
 
 
 
 
 
-  <title>在线倍增LCA模板 | 风中追风</title>
+  <title>Codeforces Round #480 (Div. 2) D - Perfect Groups(数学+思维) | 风中追风</title>
   
 
 
@@ -280,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/09/在线倍增LCA模板/">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/12/Codeforces-Round-480-Div-2-D-Perfect-Groups/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HsiaoYeekwan">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在线倍增LCA模板</h1>
+          <h1 class="post-title" itemprop="name headline">Codeforces Round #480 (Div. 2) D - Perfect Groups(数学+思维)</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-09T21:20:56+08:00">
-                2018-08-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T18:23:41+08:00">
+                2018-08-12
               </time>
             
 
@@ -325,8 +325,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-11T20:47:17+08:00">
-                2018-08-11
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-12T18:38:14+08:00">
+                2018-08-12
               </time>
             
           </span>
@@ -386,9 +386,35 @@
       
 
       
-        <h2 id="LCA在线倍增，单词查询O-lgn"><a href="#LCA在线倍增，单词查询O-lgn" class="headerlink" title="LCA在线倍增，单词查询O(lgn)"></a>LCA在线倍增，单词查询O(lgn)</h2><a id="more"></a>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> dep[maxn] , p[maxn][<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> fa)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; G[u].size() ; i ++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> v =G[u][i];</span><br><span class="line">        <span class="keyword">if</span>(v == fa) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">if</span>(! dep[v])</span><br><span class="line">            dep[v] = dep[u] + <span class="number">1</span>, p[v][<span class="number">0</span>] = u, dfs(v, u);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">lca_init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dep, <span class="number">0</span>, <span class="keyword">sizeof</span> dep);</span><br><span class="line">    <span class="keyword">int</span> root;<span class="comment">//一定要选择入度为0的点为根节点</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">if</span>(in[i] == <span class="number">0</span>) root = i;</span><br><span class="line">    dep[root] = <span class="number">1</span>;</span><br><span class="line">    dfs(root, <span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; (<span class="number">1</span>&lt;&lt;j) &lt;= n; j++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">            p[i][j] = p[p[i][j<span class="number">-1</span>]][j<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> u)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(dep[v] &lt; dep[u]) swap(v, u);</span><br><span class="line">    <span class="keyword">int</span> d = dep[v] - dep[u];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; (d&gt;&gt;i) != <span class="number">0</span>; i++)</span><br><span class="line">        <span class="keyword">if</span>((d&gt;&gt;i) &amp; <span class="number">1</span>) v = p[v][i];</span><br><span class="line">    <span class="keyword">if</span>(v == u) <span class="keyword">return</span> v;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">20</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">        <span class="keyword">if</span>(p[v][i] != p[u][i]) v = p[v][i], u = p[u][i];</span><br><span class="line">    <span class="keyword">return</span> p[v][<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h3 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h3><p><a href="http://codeforces.com/contest/980/problem/D" target="_blank" rel="noopener">codeforces 980D</a></p>
+<blockquote>
+<p></p><p>SaMer has written the greatest test case of all time for one of his problems. For a given array of integers, the problem asks to find the minimum number of groups the array can be divided into, such that the product of any pair of integers in the same group is a perfect square. </p><p>Each integer must be in exactly one group. However, integers in a group do not necessarily have to be contiguous in the array.</p><p>SaMer wishes to create more cases from the test case he already has. His test case has an array $$$A$$$ of $$$n$$$ integers, and he needs to find the number of contiguous subarrays of $$$A$$$ that have an answer to the problem equal to $$$k$$$ for each integer $$$k$$$ between $$$1$$$ and $$$n$$$ (inclusive).<br><a id="more"></a></p>
+</blockquote>
+<p><big>Input</big></p>
+<blockquote>
+<p>The first line of input contains a single integer $$$n$$$ ($$$1 \leq n \leq 5000$$$), the size of the array.</p><p>The second line contains $$$n$$$ integers $$$a_1$$$,$$$a_2$$$,$$$\dots$$$,$$$a_n$$$ ($$$-10^8 \leq a_i \leq 10^8$$$), the values of the array.</p>
+</blockquote>
+<p><big>Output</big></p>
+<blockquote>
+<p>Output $$$n$$$ space-separated integers, the $$$k$$$-th integer should be the number of contiguous subarrays of $$$A$$$ that have an answer to the problem equal to $$$k$$$.</p>
+</blockquote>
+<p><big>Examples<br>Input</big></p>
+<blockquote>
+<p>2<br>5 5<br>Output<br>3 0</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>5<br>5 -4 2 1 8<br>Output<br>5 5 3 2 0</p>
+</blockquote>
+<p>Input</p>
+<blockquote>
+<p>1<br>0<br>Output<br>1</p>
+</blockquote>
+<p>###思路</p>
+<blockquote>
+<p>题意是给定一个序列a，对于k(1&lt;=k&lt;=n),输出有多少个连续子区间的值为k。子区间的值定义为把区间中的数分组，最少分几组能使得每组两两相乘的结果都是完全平方数<br>如果一个数的因子中有完全平方数,除掉他并不会对答案有影响。然后统计有多少个不同的数就行了，因为只有相同的数相乘才会是完全平方数。<br>注意0的情况需要特殊判断一下。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> ull;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">5000</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn] , vis[maxn] , n , ans[maxn] , ct[maxn];</span><br><span class="line"><span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; st;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> up = <span class="number">1e8</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span> ; i * i&lt;= up  ; i ++)&#123;</span><br><span class="line">        st.insert(i*i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(k &lt; <span class="number">0</span> &amp;&amp; st.count(-k))<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">if</span>(k &gt;= <span class="number">0</span> &amp;&amp; st.count(k))<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change</span><span class="params">(<span class="keyword">int</span> &amp;x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)flag = <span class="number">1</span> , x = -x;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span> ;i * i &lt;= x ; i ++)&#123;</span><br><span class="line">        <span class="keyword">while</span>(x % (i*i) == <span class="number">0</span>)&#123;</span><br><span class="line">            x /= (i * i);</span><br><span class="line">            <span class="keyword">if</span>(x == <span class="number">1</span>)<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(flag)x = -x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">id</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> lower_bound(v.begin() , v.end() , x) - v.begin();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ;i &lt;= n ; i ++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span> , &amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">        change(a[i]);</span><br><span class="line">        v.push_back(a[i]);</span><br><span class="line">        <span class="keyword">if</span>(judge(a[i]))vis[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(v.begin() , v.end());</span><br><span class="line">    v.erase(unique(v.begin() , v.end()) , v.end());</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;  i &lt;= n ; i ++)&#123;</span><br><span class="line">        a[i] = id(a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(ct , <span class="number">0</span> , <span class="keyword">sizeof</span>(ct));</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = i; j &lt;= n ; j ++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!ct[a[j]] &amp;&amp; v[a[j]])sum ++ , ct[a[j]] = <span class="number">1</span>;</span><br><span class="line">            ans[max(<span class="number">1</span> , sum)] ++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d%c"</span> , ans[i] , i == <span class="string">'n'</span> ? <span class="string">'\n'</span> : <span class="string">' '</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -405,9 +431,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/模板/" rel="tag"># 模板</a>
+            <a href="/tags/思维/" rel="tag"># 思维</a>
           
-            <a href="/tags/LCA/" rel="tag"># LCA</a>
+            <a href="/tags/数学/" rel="tag"># 数学</a>
+          
+            <a href="/tags/codeforces/" rel="tag"># codeforces</a>
           
         </div>
       
@@ -420,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/08/Codeforces-Round-500-Div-2/" rel="next" title="Codeforces Round #500 (Div. 2) E.Hills (DP)">
-                <i class="fa fa-chevron-left"></i> Codeforces Round #500 (Div. 2) E.Hills (DP)
+              <a href="/2018/08/12/codeforces-113B-Petr-字符串哈希/" rel="next" title="codeforces 113B Petr#(字符串哈希)">
+                <i class="fa fa-chevron-left"></i> codeforces 113B Petr#(字符串哈希)
               </a>
             
           </div>
@@ -429,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/12/codeforces-113B-Petr-字符串哈希/" rel="prev" title="codeforces 113B Petr#(字符串哈希)">
-                codeforces 113B Petr#(字符串哈希) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -589,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#LCA在线倍增，单词查询O-lgn"><span class="nav-number">1.</span> <span class="nav-text">LCA在线倍增，单词查询O(lgn)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a></li></ol></div>
             
 
           </div>
