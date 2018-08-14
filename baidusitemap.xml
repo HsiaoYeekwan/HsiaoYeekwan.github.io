@@ -490,14 +490,16 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-20-POJ-3463%EF%BC%88Dijkstra%E6%AC%A1%E7%9F%AD%E8%B7%AF+%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%ADand%E6%AC%A1%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E9%87%8F%EF%BC%89/</loc>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-20-Dijkstra%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E7%9B%AE/</loc>
     <lastmod>2017-07-19T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>POJ-3463（Dijkstra次短路+计算最短and次短路径数量）</title>
-        <pubTime>2018-08-07T01:37:22.111Z</pubTime>
+        <title>Dijkstra算法计算最短路径数目</title>
+        <pubTime>2018-08-07T01:37:22.110Z</pubTime>
         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
         <tag>最短路</tag>
          
@@ -512,16 +514,14 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-20-Dijkstra%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E7%9B%AE/</loc>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-20-POJ-3463%EF%BC%88Dijkstra%E6%AC%A1%E7%9F%AD%E8%B7%AF+%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%ADand%E6%AC%A1%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E9%87%8F%EF%BC%89/</loc>
     <lastmod>2017-07-19T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>Dijkstra算法计算最短路径数目</title>
-        <pubTime>2018-08-07T01:37:22.110Z</pubTime>
+        <title>POJ-3463（Dijkstra次短路+计算最短and次短路径数量）</title>
+        <pubTime>2018-08-07T01:37:22.111Z</pubTime>
         
         <tag>ACM</tag>
-         
-        <tag>模板</tag>
          
         <tag>最短路</tag>
          
@@ -624,28 +624,6 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-03-POJ%202376%20Cleaning%20Shifts%EF%BC%88%E5%8C%BA%E9%97%B4%E8%A6%86%E7%9B%96%EF%BC%8C%E8%B4%AA%E5%BF%83%EF%BC%89/</loc>
-    <lastmod>2017-07-02T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>POJ 2376 Cleaning Shifts（区间覆盖，贪心）</title>
-        <pubTime>2018-08-07T01:37:22.105Z</pubTime>
-        
-        <tag>ACM</tag>
-         
-        <tag>贪心</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xyk1998.cn/2018/08/07/2017-07-04-CodeForces%20-%20404C/</loc>
     <lastmod>2017-07-02T16:00:00.000Z</lastmod>
     <data>
@@ -668,16 +646,16 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-02-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97nlogn%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-03-POJ%202376%20Cleaning%20Shifts%EF%BC%88%E5%8C%BA%E9%97%B4%E8%A6%86%E7%9B%96%EF%BC%8C%E8%B4%AA%E5%BF%83%EF%BC%89/</loc>
+    <lastmod>2017-07-02T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>最长上升子序列nlogn（LIS）</title>
-        <pubTime>2018-08-07T01:37:22.104Z</pubTime>
+        <title>POJ 2376 Cleaning Shifts（区间覆盖，贪心）</title>
+        <pubTime>2018-08-07T01:37:22.105Z</pubTime>
         
-        <tag>dp</tag>
+        <tag>ACM</tag>
          
-        <tag>模板</tag>
+        <tag>贪心</tag>
          
          
            
@@ -703,6 +681,28 @@
            
              
               <breadCrumb title="Life" url="http://xyk1998.cn/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-02-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97nlogn%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>最长上升子序列nlogn（LIS）</title>
+        <pubTime>2018-08-07T01:37:22.104Z</pubTime>
+        
+        <tag>dp</tag>
+         
+        <tag>模板</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
           
         </display>
     </data>
