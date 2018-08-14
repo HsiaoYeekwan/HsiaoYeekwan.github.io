@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b629ff;
+  background: #b03405;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3036,4 +3036,8 @@ header.post-header {
 body {
   background: url("/images/background1.jpg");
   background-attachment: fixed;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
 }
