@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://xyk1998.cn/2018/08/15/hdu6397-Character-Encoding-%E5%AE%B9%E6%96%A5/</loc>
+    <lastmod>2018-08-15T14:07:12.007Z</lastmod>
+    <data>
+        <display>
+        <title>hdu6397 Character Encoding(容斥)</title>
+        <pubTime>2018-08-15T13:40:57.000Z</pubTime>
+        
+        <tag>ACM</tag>
+         
+        <tag>容斥</tag>
+         
+        <tag>数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xyk1998.cn/2018/08/14/%E5%BF%AB%E9%80%9F%E8%AF%BB%E5%85%A5%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2018-08-14T08:27:29.246Z</lastmod>
     <data>
@@ -11,9 +35,9 @@
         <title>快速读入模板</title>
         <pubTime>2018-08-14T07:22:52.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
          
            
@@ -219,9 +243,9 @@
         <title>HihoCoder-1636(三维区间dp)</title>
         <pubTime>2018-08-07T01:37:22.119Z</pubTime>
         
-        <tag>dp</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>dp</tag>
          
          
            
@@ -358,28 +382,6 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-27-UVA-11426%20GCD%20-%20Extreme%20(II)%EF%BC%88%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%BA%94%E7%94%A8%EF%BC%89/</loc>
-    <lastmod>2017-07-26T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>UVA-11426 GCD - Extreme (II)（欧拉函数应用）</title>
-        <pubTime>2018-08-07T01:37:22.115Z</pubTime>
-        
-        <tag>ACM</tag>
-         
-        <tag>欧拉函数</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xyk1998.cn/2018/08/07/2017-07-27-UVA-11149%20Power%20of%20Matrix%EF%BC%88%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97-%E5%80%8D%E5%A2%9E%E6%B3%95%EF%BC%89/</loc>
     <lastmod>2017-07-26T16:00:00.000Z</lastmod>
     <data>
@@ -402,16 +404,16 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-26-UVA-1601%20The%20Morning%20after%20Halloween%EF%BC%88%E5%8F%8C%E5%90%91BFS%EF%BC%89/</loc>
-    <lastmod>2017-07-25T16:00:00.000Z</lastmod>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-27-UVA-11426%20GCD%20-%20Extreme%20(II)%EF%BC%88%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0%E5%BA%94%E7%94%A8%EF%BC%89/</loc>
+    <lastmod>2017-07-26T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>UVA-1601 The Morning after Halloween（双向BFS）</title>
-        <pubTime>2018-08-07T01:37:22.113Z</pubTime>
+        <title>UVA-11426 GCD - Extreme (II)（欧拉函数应用）</title>
+        <pubTime>2018-08-07T01:37:22.115Z</pubTime>
         
         <tag>ACM</tag>
          
-        <tag>搜索</tag>
+        <tag>欧拉函数</tag>
          
          
            
@@ -434,6 +436,28 @@
         <tag>ACM</tag>
          
         <tag>最小生成树</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-26-UVA-1601%20The%20Morning%20after%20Halloween%EF%BC%88%E5%8F%8C%E5%90%91BFS%EF%BC%89/</loc>
+    <lastmod>2017-07-25T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>UVA-1601 The Morning after Halloween（双向BFS）</title>
+        <pubTime>2018-08-07T01:37:22.113Z</pubTime>
+        
+        <tag>ACM</tag>
+         
+        <tag>搜索</tag>
          
          
            
@@ -519,9 +543,9 @@
         <title>Dijkstra算法计算最短路径数目</title>
         <pubTime>2018-08-07T01:37:22.110Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
         <tag>最短路</tag>
          
@@ -565,11 +589,11 @@
         <title>HDU-3342 Legal or Not(拓扑排序判断环)</title>
         <pubTime>2018-08-07T01:37:22.108Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
          
         <tag>拓扑排序</tag>
+         
+        <tag>模板</tag>
          
          
            
@@ -668,6 +692,28 @@
 
     
   <url>
+    <loc>http://xyk1998.cn/2018/08/07/2017-07-02-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97nlogn%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>最长上升子序列nlogn（LIS）</title>
+        <pubTime>2018-08-07T01:37:22.104Z</pubTime>
+        
+        <tag>模板</tag>
+         
+        <tag>dp</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xyk1998.cn/2018/08/07/2017-07-02-%E7%8F%AD%E7%BA%A7%E5%87%BA%E6%B8%B8/</loc>
     <lastmod>2017-07-01T16:00:00.000Z</lastmod>
     <data>
@@ -681,28 +727,6 @@
            
              
               <breadCrumb title="Life" url="http://xyk1998.cn/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xyk1998.cn/2018/08/07/2017-07-02-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97nlogn%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>最长上升子序列nlogn（LIS）</title>
-        <pubTime>2018-08-07T01:37:22.104Z</pubTime>
-        
-        <tag>dp</tag>
-         
-        <tag>模板</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
           
         </display>
     </data>
