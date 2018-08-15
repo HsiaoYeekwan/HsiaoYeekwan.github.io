@@ -12,23 +12,23 @@ mathjax: true
 
 ## 题意
 ><big>求解$\sum_{i=1}^m x_i=k$
-<big>其中 $0 \leq x_i \leq {n-1} & 的解得个数,然后取模
+><big>其中 $0 \leq x_i \leq {n-1} $ 的解得个数,然后取模
 ><big>根据隔板法，所有答案为
 $$
 \begin{pmatrix}
-	k+m-1\\
-	m-1\\
+	{k+m-1}\\
+	{m-1}\\
 \end{pmatrix}
 $$
 >假设至少有i个位置值域不符合要求的个数：
 $$
 \begin{pmatrix}
-	m\\
-	i\\
+	{m}\\
+	{i}\\
 \end{pmatrix}
 \begin{pmatrix}
-	k+m-1-i*n\\
-	m-1\\
+	{k+m-1-i*n}\\
+	{m-1}\\
 \end{pmatrix}
 $$
 ```c
