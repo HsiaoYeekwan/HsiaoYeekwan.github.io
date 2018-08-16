@@ -16,28 +16,22 @@ mathjax: true
 ><big>根据隔板法，所有答案为
 $$
 \begin{pmatrix}
-	{k+m-1}\\
-	{m-1}\\
+	{k+m-1}\\\\
+	{m-1}\\\\
 \end{pmatrix}
 $$
 >假设至少有i个位置值域不符合要求的个数：
 $$
 \begin{pmatrix}
-	{m}\\
-	{i}\\
+	{m}\\\\
+	{i}\\\\
 \end{pmatrix}
 \begin{pmatrix}
-	{k+m-1-i*n}\\
-	{m-1}\\
+	{k+m-1-i*n}\\\\
+	{m-1}\\\\
 \end{pmatrix}
 $$
-$$
-\begin{matrix}
-	1 & x & x^2 \\
-	1 & y & y^2 \\
-	1 & z & z^2 \\
-\end{matrix}
-$$
+
 ```c
 #include <iostream>
 #include <bits/stdc++.h>
