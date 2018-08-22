@@ -279,7 +279,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/07/2017-10-31-2017福州CSP之旅/">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/07/2017-11-21-HihoCoder-1636（三维区间dp）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HsiaoYeekwan">
@@ -298,7 +298,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/07/2017-10-31-2017福州CSP之旅/" itemprop="url">2017福州CSP之旅</a></h1>
+                <a class="post-title-link" href="/2018/08/07/2017-11-21-HihoCoder-1636（三维区间dp）/" itemprop="url">HihoCoder-1636(三维区间dp)</a></h1>
         
 
         <div class="post-meta">
@@ -326,8 +326,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T00:00:00+08:00">
-                2017-10-31
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-21T00:00:00+08:00">
+                2017-11-21
               </time>
             
           </span>
@@ -345,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/summary/" itemprop="url" rel="index">
-                    <span itemprop="name">summary</span>
+                  <a href="/categories/ACM/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM</span>
                   </a>
                 </span>
 
@@ -383,13 +383,14 @@
 
       
         
-          
-          
-　25号凌晨三点半起的床，四点二十出发去机场。早上六点半的飞机，八点半到的福州，然后坐机场大巴去福建师范大学。到学生公寓大概十点半了，累的连出去吃饭的力气都没有，叫了外卖，吃完后睡了一觉。　不得不说南方的大学跟北方的大学有很大不同。住宿风格完全不一样，南方是那种小区似的生活区，看起来才有大学的感觉，瞬间觉得自己上的是个加强型高中。我们住的楼对过就是女生宿舍，表示如果不关门啥都能看见。去的第一天下午醒来之后晚上打车去附近的万达搓了一顿，然后就坐公交回住的地方。福州的公交车是复古风吗？居然有跟博山十年前一样的公交车，而且公交车上挺破的，比青岛差远了。不知道为什么，很喜欢福建人说话的口音。晚上回到公寓，没想到福州晚上这么疯狂，我们后面那个楼下面说话声没停过，那个门有一道缝，外面的喧闹声弄得我晚上没睡着，最后一次看表已经快两点了。早上六点半起的床，去比赛场地。　不得不说，CSP比赛是真的累啊，比赛一共是13个小时，本打算下午六点前出来的，第二个题不知道为什么错，总是过不了，一直到晚上9.30左右，实在累得不行就提前出来了（结束时间是晚上10.00），最后交的是纯暴力的程序，水了15分，没想到
-          ...
+          <h2 id="题目传送门-：HihoCoder-1636"><a href="#题目传送门-：HihoCoder-1636" class="headerlink" title="题目传送门 ：HihoCoder-1636"></a>题目传送门 ：<a href="https://hihocoder.com/problemset/problem/1636" target="_blank" rel="noopener">HihoCoder-1636</a></h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h3><blockquote>
+<p>石子归并，只不过第一行除了给出n，还给出L，R。<br>每次合并必须合并相邻的k堆(L&lt;=k&lt;=R)<br>求能不能合并成一堆，不能的话输出0，否则输出最小代价。</p>
+</blockquote>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>北京现场赛的铜牌题，是个三维的区间dp，之前做的区间dp都是二维，这次懵逼了。<br>dp[i][j][k]代表区间i-j分成k堆的最小代价。<br>f(i,j,1) = min( f(i,k,p)+f(k+1,j,1)+sum(i,j) )(k = 1);<br>f(i,j,k) = min( f(i,p,k-1)+f(p+1,j,1) )(k &gt; 1)<br>关键就是枚举的时候,要把堆按照k-1堆和1堆合并来枚举答案,这样枚举复杂度是n^2,否则情况太复杂<br>分成一堆的情况比较好想，注意枚举p的范围是[L-1,R-1];<br>分成k堆的时候,注意不要+sum(i,j),因为k-1堆和1堆一共是k堆，并没有合并。<br>这样总的时间复杂度是n^4。<br>热身赛测机器时1e8的数据大概150ms,复杂度完全符合题目要求。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/08/07/2017-10-31-2017福州CSP之旅/#more" rel="contents">
+            <a class="btn" href="/2018/08/07/2017-11-21-HihoCoder-1636（三维区间dp）/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -555,6 +556,167 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/07/2017-10-31-2017-IPCP西安站总结与反思/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/07/2017-10-31-2017福州CSP之旅/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HsiaoYeekwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风中追风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/07/2017-10-31-2017福州CSP之旅/" itemprop="url">2017福州CSP之旅</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T09:37:22+08:00">
+                2018-08-07
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-10-31T00:00:00+08:00">
+                2017-10-31
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/summary/" itemprop="url" rel="index">
+                    <span itemprop="name">summary</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+　25号凌晨三点半起的床，四点二十出发去机场。早上六点半的飞机，八点半到的福州，然后坐机场大巴去福建师范大学。到学生公寓大概十点半了，累的连出去吃饭的力气都没有，叫了外卖，吃完后睡了一觉。　不得不说南方的大学跟北方的大学有很大不同。住宿风格完全不一样，南方是那种小区似的生活区，看起来才有大学的感觉，瞬间觉得自己上的是个加强型高中。我们住的楼对过就是女生宿舍，表示如果不关门啥都能看见。去的第一天下午醒来之后晚上打车去附近的万达搓了一顿，然后就坐公交回住的地方。福州的公交车是复古风吗？居然有跟博山十年前一样的公交车，而且公交车上挺破的，比青岛差远了。不知道为什么，很喜欢福建人说话的口音。晚上回到公寓，没想到福州晚上这么疯狂，我们后面那个楼下面说话声没停过，那个门有一道缝，外面的喧闹声弄得我晚上没睡着，最后一次看表已经快两点了。早上六点半起的床，去比赛场地。　不得不说，CSP比赛是真的累啊，比赛一共是13个小时，本打算下午六点前出来的，第二个题不知道为什么错，总是过不了，一直到晚上9.30左右，实在累得不行就提前出来了（结束时间是晚上10.00），最后交的是纯暴力的程序，水了15分，没想到
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/07/2017-10-31-2017福州CSP之旅/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -911,169 +1073,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/07/2017-09-14- ICPC 新疆选拔赛总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HsiaoYeekwan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/head.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风中追风">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/07/2017-09-14- ICPC 新疆选拔赛总结/" itemprop="url">2017 ICPC 新疆选拔赛总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T09:37:22+08:00">
-                2018-08-07
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-14T00:00:00+08:00">
-                2017-09-14
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/summary/" itemprop="url" rel="index">
-                    <span itemprop="name">summary</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          记于2017.9.14
- 开局紧张了，第一个上升子序列wa了两发。比赛开始一定要保持镇定。j题卡了，思维正确，不会写字典树查询这个题我背锅，导致了队友没有出后来的题。比赛后半段团队战略有问题，不能三开。还是要提高代码能力，不只是模拟，一些麻烦且常用的算法，数据结构之类的要能熟练运用。水题（一般前两题或者三题）尽量是一个人快速并准确完成，重点是心态，开局一点要稳，上来肯定有简单提，要保证1a。比赛后半段，要改一下以前的模式，在能力没达到一定水平之前，尽量一个一个做，一起讨论，互相补充不足。如果卡题，也一定要稳住心态。排除编译器等场外因素，今天这场比赛主要是心态问题，毕竟有些坑，必须要踩一遍，早遇到总比在比赛时遇到好。不断提高自我，信心不能丧失，干他妈的！
-
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/07/2017-09-14- ICPC 新疆选拔赛总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1128,7 +1127,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
