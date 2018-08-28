@@ -7,7 +7,6 @@ type: "links"
  <html>
  <head>
      <meta charset="utf-8">
-     <title>html 简单的table样式</title>
      <style type="text/css">
      /* gridtable */
      table.gridtable {
@@ -112,7 +111,7 @@ type: "links"
      /* /hovertable */
      </style>
  </head>
- <body>
+<body>
 <table class="imagetable">
      <tr>
          <th>Info Header 1</th>
