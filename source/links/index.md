@@ -114,8 +114,6 @@ type: "links"
      </style>
  </head>
  <body>
- 
- <h2>table样式2:带背景图的CSS样式表格</h2>
 <table class="imagetable">
      <tr>
          <th>Info Header 1</th>
@@ -129,25 +127,23 @@ type: "links"
          <td>Text 2A</td><td>Text 2B</td><td>Text 2C</td>
      </tr>
  </table>
- 
- <h2>table样式4:鼠标悬停高亮的CSS样式表格 (需要JS)</h2>
  <table class="hovertable">
      <tr>
          <th>Info Header 1</th><th>Info Header 2</th><th>Info Header 3</th>
      </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+     <tr onmouseover="this.style.backgroundColor='#ffff66';">
          <td>Item 1A</td><td>Item 1B</td><td>Item 1C</td>
      </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+     <tr onmouseover="this.style.backgroundColor='#ffff66';" >
          <td>Item 2A</td><td>Item 2B</td><td>Item 2C</td>
      </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+     <tr onmouseover="this.style.backgroundColor='#ffff66';">
          <td>Item 3A</td><td>Item 3B</td><td>Item 3C</td>
      </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+     <tr onmouseover="this.style.backgroundColor='#ffff66';" >
          <td>Item 4A</td><td>Item 4B</td><td>Item 4C</td>
      </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+     <tr onmouseover="this.style.backgroundColor='#ffff66';">
          <td>Item 5A</td><td>Item 5B</td><td>Item 5C</td>
      </tr>
  </table>
