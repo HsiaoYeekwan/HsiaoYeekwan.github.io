@@ -4,8 +4,6 @@ date: 2018-08-28 10:23:42
 type: "links"
 
 ---
-
-<!DOCTYPE html>
  <html>
  <head>
      <meta charset="utf-8">
