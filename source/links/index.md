@@ -110,7 +110,6 @@ type: "links"
          border-color: #a9c6c9;
      }
      /* /hovertable */
- 
      </style>
  </head>
  <body>
@@ -127,47 +126,5 @@ type: "links"
          <td>Text 2A</td><td>Text 2B</td><td>Text 2C</td>
      </tr>
  </table>
- <table class="hovertable">
-     <tr>
-         <th>Info Header 1</th><th>Info Header 2</th><th>Info Header 3</th>
-     </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';">
-         <td>Item 1A</td><td>Item 1B</td><td>Item 1C</td>
-     </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" >
-         <td>Item 2A</td><td>Item 2B</td><td>Item 2C</td>
-     </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';">
-         <td>Item 3A</td><td>Item 3B</td><td>Item 3C</td>
-     </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';" >
-         <td>Item 4A</td><td>Item 4B</td><td>Item 4C</td>
-     </tr>
-     <tr onmouseover="this.style.backgroundColor='#ffff66';">
-         <td>Item 5A</td><td>Item 5B</td><td>Item 5C</td>
-     </tr>
- </table>
- 
- <script type="text/javascript">
-     function altRows(id){
-         if(document.getElementsByTagName){
- 
-             var table = document.getElementById(id);
-             var rows = table.getElementsByTagName("tr");
- 
-             for(i = 0; i < rows.length; i++){
-                 if(i % 2 == 0){
-                     rows[i].className = "evenrowcolor";
-                 }else{
-                     rows[i].className = "oddrowcolor";
-                 }
-             }
-         }
-     }
- 
-     window.onload=function(){
-         altRows('alternatecolor');
-     }
- </script>
  </body>
  </html>
