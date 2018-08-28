@@ -4,10 +4,7 @@ date: 2018-08-28 10:23:42
 type: "links"
 
 ---
- <html>
- <head>
-     <meta charset="utf-8">
-     <style type="text/css">
+<style type="text/css">
      /* gridtable */
      table.gridtable {
          font-family: verdana,arial,sans-serif;
@@ -109,9 +106,7 @@ type: "links"
          border-color: #a9c6c9;
      }
      /* /hovertable */
-     </style>
- </head>
-<body>
+</style>
 <table class="imagetable">
      <tr>
          <th>Info Header 1</th>
@@ -125,5 +120,3 @@ type: "links"
          <td>Text 2A</td><td>Text 2B</td><td>Text 2C</td>
      </tr>
  </table>
- </body>
- </html>
