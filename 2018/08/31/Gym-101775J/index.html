@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="dp,模板," />
+  <meta name="keywords" content="ACM,思维,差分," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="用法是：如果是严格LIS，则用的是lower_bound()如果是非严格LIS,则用的是upper_bound()">
-<meta name="keywords" content="dp,模板">
+<meta name="description" content="题目链接GYM-101775J 思路 首先是根据差分的思想:对于区间[L,R]的顺子,即d[L] ++ , d[R+1] – , d数组的前缀和即为对应的数字(差分数组性质)其次是长度大于5的顺子我都可以拆成长度为3,4,5的若干组合所以对于每一个正数d[i]，一定存在若干个j（j &amp;gt;= i + 3）他们加和等于0,并且最后差分的和应该是0，中间的计算结果也不可以小于0.">
+<meta name="keywords" content="ACM,思维,差分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最长上升子序列nlogn（LIS）">
-<meta property="og:url" content="http://xyk1998.cn/2018/08/30/2017-07-02-最长上升子序列nlogn算法/index.html">
+<meta property="og:title" content="Gym-101775J(2017 EC-Final J题)">
+<meta property="og:url" content="http://xyk1998.cn/2018/08/31/Gym-101775J/index.html">
 <meta property="og:site_name" content="风中追风">
-<meta property="og:description" content="用法是：如果是严格LIS，则用的是lower_bound()如果是非严格LIS,则用的是upper_bound()">
+<meta property="og:description" content="题目链接GYM-101775J 思路 首先是根据差分的思想:对于区间[L,R]的顺子,即d[L] ++ , d[R+1] – , d数组的前缀和即为对应的数字(差分数组性质)其次是长度大于5的顺子我都可以拆成长度为3,4,5的若干组合所以对于每一个正数d[i]，一定存在若干个j（j &amp;gt;= i + 3）他们加和等于0,并且最后差分的和应该是0，中间的计算结果也不可以小于0.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-01T16:00:00.000Z">
+<meta property="og:updated_time" content="2018-08-31T13:32:31.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="最长上升子序列nlogn（LIS）">
-<meta name="twitter:description" content="用法是：如果是严格LIS，则用的是lower_bound()如果是非严格LIS,则用的是upper_bound()">
+<meta name="twitter:title" content="Gym-101775J(2017 EC-Final J题)">
+<meta name="twitter:description" content="题目链接GYM-101775J 思路 首先是根据差分的思想:对于区间[L,R]的顺子,即d[L] ++ , d[R+1] – , d数组的前缀和即为对应的数字(差分数组性质)其次是长度大于5的顺子我都可以拆成长度为3,4,5的若干组合所以对于每一个正数d[i]，一定存在若干个j（j &amp;gt;= i + 3）他们加和等于0,并且最后差分的和应该是0，中间的计算结果也不可以小于0.">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://xyk1998.cn/2018/08/30/2017-07-02-最长上升子序列nlogn算法/"/>
+  <link rel="canonical" href="http://xyk1998.cn/2018/08/31/Gym-101775J/"/>
 
 
 
 
 
-  <title>最长上升子序列nlogn（LIS） | 风中追风</title>
+  <title>Gym-101775J(2017 EC-Final J题) | 风中追风</title>
   
 
 
@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-02-最长上升子序列nlogn算法/">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/31/Gym-101775J/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HsiaoYeekwan">
@@ -307,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">最长上升子序列nlogn（LIS）</h1>
+          <h1 class="post-title" itemprop="name headline">Gym-101775J(2017 EC-Final J题)</h1>
         
 
         <div class="post-meta">
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T10:26:16+08:00">
-                2018-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T21:22:43+08:00">
+                2018-08-31
               </time>
             
 
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-02T00:00:00+08:00">
-                2017-07-02
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-31T21:32:31+08:00">
+                2018-08-31
               </time>
             
           </span>
@@ -396,13 +396,11 @@
       
 
       
-        <blockquote>
-<p>用法是：如果是严格LIS，则用的是lower_bound()<br><br>如果是非严格LIS,则用的是upper_bound()<br></p>
+        <h2 id="题目链接"><a href="#题目链接" class="headerlink" title="题目链接"></a>题目链接</h2><p><a href="https://vjudge.net/problem/Gym-101775J" target="_blank" rel="noopener">GYM-101775J</a></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><blockquote>
+<p>首先是根据差分的思想:<br>对于区间[L,R]的顺子,即d[L] ++ , d[R+1] – , d数组的前缀和即为对应的数字(差分数组性质)<br>其次是长度大于5的顺子我都可以拆成长度为3,4,5的若干组合<br>所以对于每一个正数d[i]，一定存在若干个j（j &gt;= i + 3）他们加和等于0,并且最后差分的和应该是0，中间的计算结果也不可以小于0.<br><a id="more"></a></p>
 </blockquote>
-<a id="more"></a>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(book,<span class="number">0</span>,<span class="keyword">sizeof</span>(book));<span class="comment">//book数组为标记数组。</span></span><br><span class="line">    book[<span class="number">1</span>] = a[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> i,k;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span> ,k = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &gt;= book[k])&#123;book[++k] = a[i];&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> pos = upper_bound(book+<span class="number">1</span>,book+<span class="number">1</span>+k,a[i])-book;</span><br><span class="line">            book[pos] = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> k;<span class="comment">//k即最长上升子序列的长度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>题目传送门：<a href="http://poj.org/problem?id=3670" target="_blank" rel="noopener">POJ 3670</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 99999999</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">30000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="keyword">int</span> book[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(book,<span class="number">0</span>,<span class="keyword">sizeof</span>(book));</span><br><span class="line">    book[<span class="number">1</span>] = a[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span> i,k;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span> ,k = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &gt;= book[k])&#123;book[++k] = a[i];&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> pos = upper_bound(book+<span class="number">1</span>,book+<span class="number">1</span>+k,a[i])-book;</span><br><span class="line">            book[pos] = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve2</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(book,<span class="number">0</span>,<span class="keyword">sizeof</span>(book));</span><br><span class="line">    <span class="keyword">int</span> i,k;</span><br><span class="line">    book[<span class="number">1</span>] = a[n];</span><br><span class="line">    <span class="keyword">for</span>(i = n<span class="number">-1</span> ,k = <span class="number">1</span> ; i &gt;= <span class="number">1</span> ; i --)&#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i] &gt;= book[k])&#123;book[++k] = a[i];&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">int</span> pos = upper_bound(book+<span class="number">1</span>,book+<span class="number">1</span>+k,a[i])-book;</span><br><span class="line">            book[pos] = a[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="comment">//ios::sync_with_stdio(false);</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">cin</span> &gt;&gt; n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n; i++)&#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans1 = n - solve(n);</span><br><span class="line">        <span class="comment">//cout &lt;&lt; ans1 &lt;&lt; endl;</span></span><br><span class="line">        <span class="keyword">int</span> ans2 = n - solve2(n);</span><br><span class="line">        <span class="comment">//cout &lt;&lt; ans1 &lt;&lt; ans2 &lt;&lt; endl;</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; min(ans1,ans2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 1e18</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn= <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> a[maxn] , d[maxn] , n;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= <span class="number">3</span> ; i ++)<span class="keyword">if</span>(d[i] &lt; <span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    ll sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i + <span class="number">3</span> &lt;= n ; i ++)&#123;</span><br><span class="line">        sum += d[i];</span><br><span class="line">        <span class="keyword">if</span>(d[i+<span class="number">3</span>] &lt; <span class="number">0</span>)sum += d[i+<span class="number">3</span>] , d[i+<span class="number">3</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(sum &lt; <span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> !sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T , kase = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; T;</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span> ; i &lt;= n ; i ++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span> , &amp;a[i]);</span><br><span class="line">            d[i] = a[i] - a[i<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        d[n+<span class="number">1</span>] = -a[n];</span><br><span class="line">        n ++;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d: %s\n"</span> , ++kase , check() ? <span class="string">"Yes"</span> : <span class="string">"No"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -419,9 +417,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/dp/" rel="tag"># dp</a>
+            <a href="/tags/ACM/" rel="tag"># ACM</a>
           
-            <a href="/tags/模板/" rel="tag"># 模板</a>
+            <a href="/tags/思维/" rel="tag"># 思维</a>
+          
+            <a href="/tags/差分/" rel="tag"># 差分</a>
           
         </div>
       
@@ -434,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/30/2017-07-03-POJ 2376 Cleaning Shifts（区间覆盖，贪心）/" rel="next" title="POJ 2376 Cleaning Shifts（区间覆盖，贪心）">
-                <i class="fa fa-chevron-left"></i> POJ 2376 Cleaning Shifts（区间覆盖，贪心）
+              <a href="/2018/08/30/2017-12-11-Wannafly挑战赛5 A.珂朵莉与宇宙/" rel="next" title="Wannafly挑战赛5 A.珂朵莉与宇宙">
+                <i class="fa fa-chevron-left"></i> Wannafly挑战赛5 A.珂朵莉与宇宙
               </a>
             
           </div>
@@ -443,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/30/2017-07-07-HDU - 5695 Gym Class(拓扑排序+优先队列)/" rel="prev" title="HDU - 5695 Gym Class(拓扑排序+优先队列)">
-                HDU - 5695 Gym Class(拓扑排序+优先队列) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -603,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">1.</span> <span class="nav-text">Example</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目链接"><span class="nav-number">1.</span> <span class="nav-text">题目链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code"><span class="nav-number">2.</span> <span class="nav-text">Code</span></a></li></ol></div>
             
 
           </div>

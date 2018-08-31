@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-20-bzoj1491社交网络（最短路计数+floyd）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HsiaoYeekwan">
@@ -308,7 +308,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/" itemprop="url">POJ-3463（Dijkstra次短路+计算最短and次短路径数量）</a></h1>
+                <a class="post-title-link" href="/2018/08/30/2017-07-20-bzoj1491社交网络（最短路计数+floyd）/" itemprop="url">bzoj1491社交网络（最短路计数+floyd）</a></h1>
         
 
         <div class="post-meta">
@@ -393,11 +393,18 @@
 
       
         
-          <h1 id="题目传送门-：-POJ-3463"><a href="#题目传送门-：-POJ-3463" class="headerlink" title="题目传送门 ： POJ 3463"></a>题目传送门 ： <a href="http://poj.org/problem?id=3463" target="_blank" rel="noopener">POJ 3463</a></h1><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
-<p>输入n，m，代表n个节点的图，下面m行每行三个数，代表从a到b的长度为c，在输入s，t，求从s到t的最短路和次短路的数目。<br><br>题目要求最短路的长度为最短路的长度+1，才为合格的次短路。<br><br>其中，用Dijkstra进行计算的时候同时保存最短路和次短路的长度，最后算出次短路的长度<br><br>最后在检测次短路长度是否合法。<br><br>cnt数组记录最短路和次短路的数量<br><br>Attention:在用Dijkstra进行最短路计数的时候，一定要标记已经访问过的节点，避免重复导致计算结果增多。<br>
+          <h1 id="题目传送门-bzoj-1491"><a href="#题目传送门-bzoj-1491" class="headerlink" title="题目传送门 : bzoj 1491"></a>题目传送门 : <a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1491" target="_blank" rel="noopener">bzoj 1491</a></h1><blockquote>
+<p>题意：<br>对于每个节点v定义I(v):<br><br><img src="https://odzkskevi.qnssl.com/fa168a3bbb51aebab04cb3969827e47e?v=1531724949" alt=""><br>其中:</p>
+<ul>
+<li>C(s,t)(v)代表经过点v的起点为s终点为t的最短路的数目<br></li>
+<li>C(s,t)表示起点为s，终点为t的所有最短路的数目<br></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>思路：<br>floyd跑一边最短路，如果GG[i][j] == GG[i][k]+GG[k][j] 即为从i到j的最短路经过点k，<br><br>可以用迪杰斯特拉将最短路径的数目计算出来，经过点k的最短路数量等于num[i][k]*num[k][j];<br><br>Attention： 题目数据会爆int<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/#more" rel="contents">
+            <a class="btn" href="/2018/08/30/2017-07-20-bzoj1491社交网络（最短路计数+floyd）/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -607,6 +614,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HsiaoYeekwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="风中追风">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/" itemprop="url">POJ-3463（Dijkstra次短路+计算最短and次短路径数量）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T10:26:16+08:00">
+                2018-08-30
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-20T00:00:00+08:00">
+                2017-07-20
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ACM/" itemprop="url" rel="index">
+                    <span itemprop="name">ACM</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="题目传送门-：-POJ-3463"><a href="#题目传送门-：-POJ-3463" class="headerlink" title="题目传送门 ： POJ 3463"></a>题目传送门 ： <a href="http://poj.org/problem?id=3463" target="_blank" rel="noopener">POJ 3463</a></h1><h2 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h2><blockquote>
+<p>输入n，m，代表n个节点的图，下面m行每行三个数，代表从a到b的长度为c，在输入s，t，求从s到t的最短路和次短路的数目。<br><br>题目要求最短路的长度为最短路的长度+1，才为合格的次短路。<br><br>其中，用Dijkstra进行计算的时候同时保存最短路和次短路的长度，最后算出次短路的长度<br><br>最后在检测次短路长度是否合法。<br><br>cnt数组记录最短路和次短路的数量<br><br>Attention:在用Dijkstra进行最短路计数的时候，一定要标记已经访问过的节点，避免重复导致计算结果增多。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/30/2017-07-20-POJ-3463（Dijkstra次短路+计算最短and次短路径数量）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-20-Dijkstra算法计算最短路径数目/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -719,165 +885,6 @@
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/30/2017-07-20-Dijkstra算法计算最短路径数目/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xyk1998.cn/2018/08/30/2017-07-10-HDU-3342 Legal or Not(拓扑排序判断环)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HsiaoYeekwan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/head.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="风中追风">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/30/2017-07-10-HDU-3342 Legal or Not(拓扑排序判断环)/" itemprop="url">HDU-3342 Legal or Not(拓扑排序判断环)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-30T10:26:16+08:00">
-                2018-08-30
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-10T00:00:00+08:00">
-                2017-07-10
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/" itemprop="url" rel="index">
-                    <span itemprop="name">ACM</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="题目传送门-：-HDU-3342"><a href="#题目传送门-：-HDU-3342" class="headerlink" title="题目传送门 ： HDU-3342"></a>题目传送门 ： <a href="http://acm.hdu.edu.cn/showproblem.php?pid=3342" target="_blank" rel="noopener">HDU-3342</a></h1><blockquote>
-<p>题意：<br>输入n,m。n代表所需要判断的人数，m是关系的数量，输入a,b代表a是b的师傅，判断输入是否合法，也就是说输入<br>1,2、2,3、3,1是不合法的，裸的拓扑排序，存在环就是输出NO，否则YES。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/30/2017-07-10-HDU-3342 Legal or Not(拓扑排序判断环)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1132,7 +1139,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">35</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1154,7 +1161,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

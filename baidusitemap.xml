@@ -3,6 +3,30 @@
 
 
     
+  <url>
+    <loc>http://xyk1998.cn/2018/08/31/Gym-101775J/</loc>
+    <lastmod>2018-08-31T13:32:31.873Z</lastmod>
+    <data>
+        <display>
+        <title>Gym-101775J(2017 EC-Final J题)</title>
+        <pubTime>2018-08-31T13:22:43.000Z</pubTime>
+        
+        <tag>ACM</tag>
+         
+        <tag>思维</tag>
+         
+        <tag>差分</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -13,9 +37,9 @@
         <title>后缀数组模板</title>
         <pubTime>2018-08-22T12:49:51.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
         <tag>字符串</tag>
          
@@ -39,9 +63,9 @@
         
         <tag>ACM</tag>
          
-        <tag>数学</tag>
-         
         <tag>容斥</tag>
+         
+        <tag>数学</tag>
          
          
            
@@ -61,9 +85,9 @@
         <title>快速读入模板</title>
         <pubTime>2018-08-14T07:22:52.000Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
          
            
@@ -85,9 +109,9 @@
         
         <tag>思维</tag>
          
-        <tag>数学</tag>
-         
         <tag>codeforces</tag>
+         
+        <tag>数学</tag>
          
          
            
@@ -269,9 +293,9 @@
         <title>HihoCoder-1636(三维区间dp)</title>
         <pubTime>2018-08-30T02:26:17.032Z</pubTime>
         
-        <tag>dp</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>dp</tag>
          
          
            
@@ -540,14 +564,16 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/30/2017-07-20-bzoj1491%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C%EF%BC%88%E6%9C%80%E7%9F%AD%E8%B7%AF%E8%AE%A1%E6%95%B0+floyd%EF%BC%89/</loc>
+    <loc>http://xyk1998.cn/2018/08/30/2017-07-20-Dijkstra%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E7%9B%AE/</loc>
     <lastmod>2017-07-19T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>bzoj1491社交网络（最短路计数+floyd）</title>
+        <title>Dijkstra算法计算最短路径数目</title>
         <pubTime>2018-08-30T02:26:16.969Z</pubTime>
         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
         <tag>最短路</tag>
          
@@ -562,15 +588,13 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/30/2017-07-20-Dijkstra%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E6%95%B0%E7%9B%AE/</loc>
+    <loc>http://xyk1998.cn/2018/08/30/2017-07-20-bzoj1491%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%BB%9C%EF%BC%88%E6%9C%80%E7%9F%AD%E8%B7%AF%E8%AE%A1%E6%95%B0+floyd%EF%BC%89/</loc>
     <lastmod>2017-07-19T16:00:00.000Z</lastmod>
     <data>
         <display>
-        <title>Dijkstra算法计算最短路径数目</title>
+        <title>bzoj1491社交网络（最短路计数+floyd）</title>
         <pubTime>2018-08-30T02:26:16.969Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
          
         <tag>最短路</tag>
@@ -615,9 +639,9 @@
         <title>HDU-3342 Legal or Not(拓扑排序判断环)</title>
         <pubTime>2018-08-30T02:26:16.954Z</pubTime>
         
-        <tag>模板</tag>
-         
         <tag>ACM</tag>
+         
+        <tag>模板</tag>
          
         <tag>拓扑排序</tag>
          
@@ -718,26 +742,6 @@
 
     
   <url>
-    <loc>http://xyk1998.cn/2018/08/30/2017-07-02-%E7%8F%AD%E7%BA%A7%E5%87%BA%E6%B8%B8/</loc>
-    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>班级出游</title>
-        <pubTime>2018-08-30T02:26:16.923Z</pubTime>
-        
-        <tag>life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://xyk1998.cn/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xyk1998.cn/2018/08/30/2017-07-02-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97nlogn%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2017-07-01T16:00:00.000Z</lastmod>
     <data>
@@ -753,6 +757,26 @@
            
              
               <breadCrumb title="ACM" url="http://xyk1998.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xyk1998.cn/2018/08/30/2017-07-02-%E7%8F%AD%E7%BA%A7%E5%87%BA%E6%B8%B8/</loc>
+    <lastmod>2017-07-01T16:00:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>班级出游</title>
+        <pubTime>2018-08-30T02:26:16.923Z</pubTime>
+        
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://xyk1998.cn/categories/Life/"/>
           
         </display>
     </data>
