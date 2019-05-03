@@ -1,17 +1,23 @@
 ---
-title: SDKD 2019 Spring Training Series C2 11th Round
+title: SDKD 2019 Spring Training Series C3 11th Round
 date: 2019-05-03 11:00:00
 tags: []
 category: ACM
 mathjax: true
 ---
 
+## Problems
+>Codeforces 1151E 难度：难 类型：思维+数学
+>Codeforces 1133E 难度：中等 类型：dp
+>Codeforces 1153D 难度：中等 类型：dp
+>Codeforces 1153B 难度：简单 类型：模拟
+>Codeforces 1154C 难度：简单 类型：思路
+>Codeforces 1154E 难度：中等 类型： 数据结构
+<!--more-->
+
 ### A codeforces 1151E
 >题意：给定一条链，去掉f(l,r)表示去掉权值不在[l,r]范围内的点，有多少个联通块求$$\sum_{l=1}^n\sum_{r=l}^n{f(l,r)}$$
 >思路：对于每个点，考虑当他作为联通块第一个点的时候的贡献，分情况讨论即可
-
-<!--more-->
-
 
 ```c
 #include <iostream> 
