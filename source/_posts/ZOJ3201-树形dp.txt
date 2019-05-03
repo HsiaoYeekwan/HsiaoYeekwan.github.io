@@ -1,0 +1,97 @@
+---
+title: ZOJ-1655-Transport Goods-最短路
+date: 2019-03-08 11:00:00
+tags: [sdust_training_2019_03_08]
+category: ACM
+mathjax: true
+---
+
+## 题目链接
+[ZOJ-1655](https://cn.vjudge.net/problem/ZOJ-1655)
+<!--more-->
+
+## 题意
+>有N-1个城市给首都(第N个城市)支援物资，有M条路，走每条路要耗费一定百分比(相对于这条路的起点的物资)的物资。问给定N-1个城市将要提供的物资，和每条路的消耗百分比。求能送到首都的最多的物资数量
+
+## 思路
+>假设每条路消耗的百分比为p，物资为x，经过之后剩下x\*(1-p)
+>根据交换律可知，所求即为总的路径中(1-p)乘积最大的路径
+>对于边u->v,如果d[v] < d[u] \* c 时进行松弛。
+
+
+```c
+#include <iostream>
+#include <bits/stdc++.h>
+#define inf 0x3f3f3f3f
+using namespace std;
+typedef long long ll;
+typedef pair<int,int> P;
+const int maxn = 2e3 + 10;
+int n , m;
+
+struct node
+{
+	int to;
+	double val;
+	node(){}
+	node(int tt,double vv):to(tt),val(vv){}
+};
+double d[maxn];
+int vis[maxn] , cnt[maxn];
+vector<node> G[maxn];
+bool spfa(int s)
+{
+	memset(d , 0 , sizeof(d));
+	d[s] = 1;
+	memset(vis ,0 , sizeof(vis) );
+	memset(cnt , 0 , sizeof(cnt));
+	queue<node> q;
+	q.push(node(s , 0));
+	vis[s] = 1;
+	while(!q.empty()){
+		node p = q.front();
+		q.pop();
+		int u = p.to;
+		cnt[u] ++;
+		vis[u] = 0;	
+		if(cnt[u] >= n+m)return false;
+		for(int i = 0 ; i < G[u].size() ; i ++){
+			int v = G[u][i].to;
+			double c = G[u][i].val;
+			if(d[v] < d[u] * c){
+				d[v] = d[u] * c;
+				if(!vis[v]){
+					q.push(node(v , d[v]));
+					vis[v] = 1;
+				}
+			}
+		}
+	}
+	return true;
+}
+double v[maxn];
+int main(int argc, char const *argv[])
+{
+	while(cin >> n >> m){
+		for(int i = 0 ;i < maxn ; i ++)G[i].clear();
+		for(int i = 1 ; i < n ; i ++){
+			scanf("%lf" , &v[i]);
+		}
+		while(m --){
+			int u , v;
+			double p;
+			cin >> u >> v >> p;
+			G[u].push_back(node(v,1-p));
+			G[v].push_back(node(u,1-p));
+		}
+		spfa(n);
+		double ans = 0;
+		for(int i = 1 ; i < n ; i ++){
+			ans += d[i] * v[i];
+		}
+		printf("%.2f\n" , ans);
+	}
+	return 0;
+}
+
+```
