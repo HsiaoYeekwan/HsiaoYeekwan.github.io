@@ -3,7 +3,8 @@ layout: post
 title: UVA-1153 Keep the Customer Satisfied(贪心)
 category: ACM
 tags: [ACM,贪心]
-updated: 2018-01-30 
+date: 2018-01-30 09:00:00
+updated: 2018-01-30
 ---
 
 ## 题目传送门 ：

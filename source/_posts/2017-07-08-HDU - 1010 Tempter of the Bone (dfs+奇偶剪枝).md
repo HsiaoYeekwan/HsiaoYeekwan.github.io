@@ -4,6 +4,7 @@ title: HDU - 1010 Tempter of the Bone (dfs+奇偶剪枝)
 category: ACM
 tags: [ACM]
 updated: 2017-07-08
+date: 2017-07-08
 ---
 ## 题目传送门 ： [HDU-1010](http://acm.hdu.edu.cn/showproblem.php?pid=1010)
 

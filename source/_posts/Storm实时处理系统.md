@@ -2,7 +2,7 @@
 title: Storm实时处理系统
 date: 2019-08-09 15:09:44
 tags: [Storm]
-category: 分布式系基础
+category: 分布式学习
 mathjax: true  
 ---
 # Storm 实时处理系统

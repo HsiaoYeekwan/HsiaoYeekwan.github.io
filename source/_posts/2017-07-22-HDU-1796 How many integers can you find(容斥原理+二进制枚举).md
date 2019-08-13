@@ -4,6 +4,7 @@ title: HDU-1796 How many integers can you find(容斥原理+二进制枚举)
 category: ACM
 tags: [ACM,容斥]
 updated: 2017-07-22
+date: 2017-07-22
 ---
 
 # 题目传送门 ： [HDU-1796](http://acm.hdu.edu.cn/showproblem.php?pid=1796)

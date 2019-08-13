@@ -4,6 +4,7 @@ title: UVA-11149 Power of Matrix（矩阵运算-倍增法）
 category: ACM
 tags: [ACM,倍增]
 updated: 2017-07-27
+date: 2017-07-27
 ---
 
 ## 题目传送门 ： [UVA-11149](https://vjudge.net/problem/UVA-11149)

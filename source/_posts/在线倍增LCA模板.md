@@ -1,6 +1,7 @@
 ---
 title: 在线倍增LCA模板
 date: 2018-08-09 21:20:56
+updated: 2018-08-09
 tags: [LCA,模板]
 category: ACM
 mathjax: true

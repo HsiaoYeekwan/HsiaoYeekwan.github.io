@@ -4,6 +4,7 @@ title: POJ 2376 Cleaning Shifts（区间覆盖，贪心）
 category: ACM
 tags: [ACM,贪心]
 updated: 2017-07-03
+date: 2017-07-03
 ---
 
 ## 题目传送门 ：[POJ 2376](http://poj.org/problem?id=2376)

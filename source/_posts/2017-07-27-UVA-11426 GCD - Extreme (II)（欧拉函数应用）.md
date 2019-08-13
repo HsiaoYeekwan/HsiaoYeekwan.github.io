@@ -4,6 +4,7 @@ title: UVA-11426 GCD - Extreme (II)（欧拉函数应用）
 category: ACM
 tags: [ACM,欧拉函数]
 updated: 2017-07-27
+date: 2017-07-27
 ---
 
 ## 题目传送门 ： [UVA-11426](https://vjudge.net/problem/UVA-11426)

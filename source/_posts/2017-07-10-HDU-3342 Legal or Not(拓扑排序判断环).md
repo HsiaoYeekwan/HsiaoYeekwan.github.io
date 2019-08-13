@@ -4,6 +4,7 @@ title: HDU-3342 Legal or Not(拓扑排序判断环)
 category: ACM
 tags: [ACM,拓扑排序,模板]
 updated: 2017-07-10
+date: 2017-07-10
 ---
 # 题目传送门 ： [HDU-3342](http://acm.hdu.edu.cn/showproblem.php?pid=3342)
 

@@ -4,6 +4,7 @@ title: HDU-4081 Qin Shi Huang's National Road System（Kruskal+次小生成树�
 category: ACM
 tags: [ACM,最小生成树]
 updated: 2017-07-26
+date: 2017-07-26
 ---
 
 ## 题目传送门 ：[HDU-4081](http://acm.hdu.edu.cn/showproblem.php?pid=4081)

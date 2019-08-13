@@ -3,6 +3,8 @@ layout: post
 title: HDU-6191 Query on A Tree(dfs序+可持久化字典树)
 category: ACM
 tags: [ACM,字典树]
+date: 2018-04-19 09:49:45
+updated: 2018-04-19
 ---
 # 题目传送门 ： [HDU 6191](https://cn.vjudge.net/problem/HDU-6191)
 

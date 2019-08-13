@@ -4,6 +4,7 @@ title: UVA-1374 Power Calculus(IDA)
 category: ACM
 tags: [ACM,搜索]
 updated: 2017-10-20
+date: 2017-10-20
 ---
 
 ## 题目传送门：
